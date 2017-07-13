@@ -1,4 +1,4 @@
-# portal-soluises
+# Portal Soluises
 
 O Portal Soluises é um espaço virtual que tem dois objetivos principais:
 
