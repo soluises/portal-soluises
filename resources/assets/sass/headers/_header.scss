@@ -1,0 +1,794 @@
+/* Header Main */
+.header {
+	background-color: $wrapper-bg-color;
+	position: relative;
+
+	a {
+		color: #222;
+
+		&:hover,
+		&:focus {
+			color: $first-color;
+		}
+	}
+
+	.header-dropdown {
+		.dropdown-menu {
+			border-radius:0;
+			overflow: hidden;
+			border:none;
+			margin-top:0;
+			box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+
+			> li {
+				> a {
+					padding: 0.45rem 0.7rem;
+
+					@media (min-width: $minmqsm) {
+						padding-left: 1rem;
+						padding-right: 1rem;
+					}
+
+					&:hover,
+					&:focus {
+						color: #fff;
+						background-color: $first-color;
+					}
+				}
+
+				&:last-child {
+					> a {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+
+		&.open,
+		&:hover,
+		&:focus {
+			.dropdown-menu {
+				display:block;
+			}
+		}
+	}
+}
+
+/* Header Top */
+.header-top {
+	font-size:0.85rem;
+	font-weight:500;
+	border-bottom: 1px solid darken($wrapper-bg-color, 6%);
+
+	a {
+		color: #666;
+
+		&:hover,
+		&:focus {
+			color: $first-color;
+		}
+	}
+
+	.header-dropdown {
+		> a {
+			display:inline-block;
+			padding:0.5rem 0.7rem;
+			background-color: darken($wrapper-bg-color, 11%);
+			border:none;
+
+			@media (min-width: $minmqsm) {
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+		}
+
+		.dropdown-menu {
+			padding:0;
+			min-width: 100%;
+			font-size:0.85rem;
+			border:none;
+		}
+
+		& + .top-menu {
+			margin-right: 1.5rem;
+		}
+
+		& + .top-links {
+			margin-right:1rem;
+			@media (min-width: $minmqsm) {
+				margin-right: 1.5rem;
+			}
+		}
+
+		&:nth-of-type(2n) {
+			> a {
+				background-color: darken($wrapper-bg-color, 5%);
+			}
+		}
+
+		&.open,
+		&:hover,
+		&:focus {
+			> a {
+				background-color: $first-color;
+				border-color: $first-color;
+				color: #fff;
+			}
+		}
+	}
+
+	.top-menu {
+		font-size:0;
+
+		@media (max-width: $maxmqsm) {
+			display: none;
+		}
+
+		li {
+			font-size:0.85rem;
+			display: inline-block;
+
+			a {
+				display: inline-block;
+				padding:0.5rem 0;
+				position: relative;
+			}
+
+			& + li {
+				&:before {
+					content:'/';
+					margin:0 0.5rem;
+					color: darken($wrapper-bg-color, 20%)
+				}
+			}
+
+			&.active,
+			&:hover,
+			&:focus {
+				a {
+					color: $second-color;
+				}
+			}
+		}
+	}
+
+	.top-text {
+		display:none;
+		margin:0.5rem 0;
+		color: #535535;
+		
+		@media (min-width: $minmqmd) {
+			display:block;
+			
+			& + .top-links {
+				margin-left:1rem;
+			}
+		}
+	}
+
+	.top-links {
+		margin:0.5rem 0;
+		font-size:0;
+		a {
+			color: $first-color;
+			display:inline-block;
+			font-size:0.85rem;
+
+			&:hover,
+			&:focus {
+				color: $second-color;
+			}
+			& + a {
+				&:before {
+					content:'/';
+					margin:0 0.35rem;
+					color: darken($wrapper-bg-color, 20%)
+				}
+			}
+		}
+
+		&.pull-right {
+			margin-right: 1rem;
+
+			@media (min-width: $minmqmd) {
+				margin-right: 1.5rem;
+			}
+		}
+	}
+
+	.social-icons {
+		margin:0;
+		font-size:0;
+
+		.social-icon {
+			display:inline-block;
+			width: auto;
+			min-width:2.5rem;
+			height:2.4rem;
+			font-size:1rem;
+			line-height:2.4rem;
+			text-align:center;
+			color: #555;
+			background-color: transparent;
+			border:none;
+			border-right: 1px solid darken($wrapper-bg-color, 6%);
+			margin:0 !important;
+			border-radius:0;
+			box-shadow: none;
+			@include transition();
+
+			&:first-child {
+				border-left: 1px solid darken($wrapper-bg-color, 6%);
+			}
+
+			i {
+
+			}
+
+			&:hover,
+			&:focus {
+				background-color: $first-color;
+				color: #fff;
+				border-color: $first-color;
+				box-shadow: none;
+			}
+		}
+
+		& + .top-links {
+			@media (min-width: $minmqsm) {
+				margin-left:  20px;
+			}
+		}
+	}
+}
+
+/* Site Logo */
+.site-logo {
+	display:block;
+	float:left;
+	margin:2.9rem 0;
+
+	img {
+		display:block;
+		max-width:100%;
+		height:auto;
+
+	}
+}
+
+.header-info-boxes {
+	font-size:0;
+	float: right;
+	margin-top:2.8rem;
+
+	.cart-dropdown + & {
+		margin-right: 1rem;
+	}
+
+	@media (max-width: $maxmqmd) {
+		display:none;
+	}
+
+	.header-info-box {
+		display: inline-block;
+		position: relative;
+		padding-left: 3.1rem;
+		font-size:0.85rem;
+		line-height:1;
+
+		.header-info-icon {
+			display:block;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			margin: 0;
+			width: 1.6rem; 
+			height: 2.8rem;
+			border-radius: 0.5em/.25em;
+			position: absolute;
+			left:0;
+			top:50%;
+			margin-top: -1.4rem;
+			color: #fff;
+			text-align: center;
+			background: darken($wrapper-bg-color, 12%);
+			@include transition();
+
+			i {
+				position: relative;
+				z-index:2;
+				font-size:1.2rem;
+				line-height: 2.8rem;
+			}
+
+			&:before,
+			&:after {
+				position: absolute;
+				width: inherit; height: inherit;
+				border-radius: inherit;
+				background: inherit;
+				content: '';
+				top:0;
+			}
+
+			&:before {
+				transform: rotate(60deg);
+				left:0;
+			}
+
+			&:after {
+				transform: rotate(-60deg);
+				right:0;
+			}
+			
+			// Custom
+			&.custom {
+				background-color: $first-color;
+				color: #fff;
+			}
+			
+			// Custom 2
+			&.custom2 {
+				background-color: $second-color;
+				color: #fff;
+			}
+			
+			// Dark
+			&.dark {
+				background-color: $dark;
+				color: #fff;
+			}
+		}
+
+		.info-box-title {
+			font-size: 0.95rem;
+			margin-bottom:0.4rem;
+			font-weight:700;
+		}
+
+		p {
+			margin-bottom:0;
+		}
+
+		& + .header-info-box  {
+			margin-left:3rem;
+		}
+	}
+}
+
+/* Header Bottom */
+.header-bottom {
+	background-color: darken($wrapper-bg-color, 6%);
+}
+
+/* Header Search Form */
+.header-search-form {
+	display:flex;
+	align-items: center;
+	position: fixed;
+	z-index:9999;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	height: 100vh;
+	background-color: rgba(0,0,0, 0.8);
+	@include transition();
+	opacity:0;
+	visibility: hidden;
+
+	&.open {
+		visibility: visible;
+		opacity:1;
+	}
+
+	form {
+		width:100%;
+		max-width: 80%;
+		margin: 0 auto;
+
+		@media (min-width: $minmqmd) {
+			max-width: 920px;
+		}
+	}
+
+	.form-control {
+		border-color: transparent;
+		background-color: transparent;
+		border-bottom-color: rgba(255, 255, 255, 0.4);
+		font-size:2rem;
+		height:70px;
+		color: #fff;
+		margin-bottom:0;
+
+		@media (min-width: $minmqsm) {
+			font-size:2.5rem;
+			height:85px;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size:3rem;
+			max-width: 920px;
+			height:102px;
+		}
+
+		&::placeholder {
+			color: #fff;
+		}
+	}
+
+	.header-search-toggle {
+		position: relative;
+		position: fixed;
+		z-index:9999;
+		right: 3rem;
+		top: 3rem;
+		color: #b7b7b7;
+		@include transition();
+		font-size:1.5rem;
+		line-height:1;
+		border:none;
+		background-color: transparent;
+
+		&:hover,
+		&:focus {
+			color: #fff;
+			background-color: transparent;
+		}
+	}
+}
+
+/* Cart Dropdown */
+.dropdown.cart-dropdown {
+	float: right;
+
+	@media (max-width: $maxmqsm) {
+		position: static;
+	}
+
+	> a {
+		position: relative;
+		display:inline-block;
+		font-size: 2.25rem;
+		line-height:1;
+		color: $first-color;
+		padding-top: 2.85rem;
+		padding-bottom: 2.85rem;
+		padding-left:2rem;
+
+		@media (min-width: $minmqmd) {
+			padding-top: 2.7rem;
+			padding-bottom: 2.9rem;
+		}
+
+		> span {
+			position: relative;
+			display:inline-block;
+		}
+
+		.dcart-total-count {
+			display:inline-block;
+			@include transition();
+			min-width:1.1rem;
+			position: absolute;
+			left:50%;
+			bottom:0.75rem;
+			transform: translateX(-50%);
+			border-radius:50%;
+			background-color: #fff;
+			color: $first-color;
+			text-align:center;
+			font-weight:600;
+			font-size: 0.75rem;
+			line-height: 1.1rem;
+
+		}
+	}
+
+	&.open,
+	&:hover,
+	&:focus {
+		> a {
+			color: darken($first-color, 10%);
+		}
+	}
+	
+
+	/* Dark Cart Icon */
+	&.dark {
+		> a {
+			color: #222;
+
+			.dcart-total-count  {
+				background-color: #fff;
+				color:#444;
+			}
+		}
+
+		&.open,
+		&:hover,
+		&:focus {
+			> a {
+				color: $first-color;
+			}
+		}
+	}
+
+	.dropdown-menu {
+		left: 0;
+		right: 0;
+		padding:1rem 1.1rem 1.1rem;
+		width: auto;
+		border-top: 0.2rem solid $first-color;
+
+		@media (min-width: $minmqsm) {
+			left:auto;
+			right:0;
+			width: 340px;
+		}
+
+		> p {
+			font-size:0.9rem;
+			font-weight:500;
+			margin-bottom:0.75rem;
+
+			span {
+				font-weight: 600;
+				font-size: 0.95rem;
+			}
+		}
+	}
+
+	.dcart-products {
+		padding:1.5rem 0 0.1rem;
+		border-top: 1px solid $wrapper-bg-color;
+		border-bottom: 1px solid $wrapper-bg-color;
+		margin-bottom:1.5rem;
+	}
+
+	.product {
+		position: relative;
+		padding:0;
+		margin-bottom:1.1rem;
+		border:none;
+		text-align: left;
+
+		&:after {
+			content:'';
+			display: table;
+			clear: both;
+		}
+
+		figure {
+			float:left;
+			img {
+				width:80px !important;
+				height:auto !important;
+			}
+		}
+
+		.product-meta {
+			padding-left:100px;
+		}
+
+		.product-title {
+			font-size:0.9rem;
+			max-width: 150px;
+			margin-bottom:0.2rem;
+		}
+
+		.product-quantity {
+			margin-bottom:0;
+			font-size:0.85rem;
+			color: #6a6a6a;
+			font-weight: 500;
+		}
+
+		.product-price-container {
+			margin-bottom:0;
+			position: static;
+			left: auto;
+			bottom: auto;
+			line-height:1.1;
+
+			.product-old-price,
+			.product-price {
+				font-size:14px;
+			}
+
+			.product-old-price + .product-price {
+				margin-top:4px;
+			}
+		}
+
+		.delete-btn {
+			position: absolute;
+			right:0;
+			top:0;
+			min-width:1.5rem;
+			height:1.5rem;
+			line-height:1.5rem;
+			font-size:0.7rem;
+			color: #777;
+
+			&:hover,
+			&:focus {
+				color: #fff;
+			}
+		}
+
+		&.last-child {
+			margin-bottom:0;
+		}
+	}
+
+	.dcart-action-container {
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+
+	.dcart-action-info {
+		padding-top:0;
+		float:left;
+		font-size:0.9rem;
+		font-weight:600;
+		
+		p {
+			margin-bottom:0.1rem;
+			line-height:1.6;
+			letter-spacing: 0.01em;
+
+			span {
+				font-weight:600;
+				font-family: $font-family;
+				font-size:0.95rem;
+			}
+
+			&:last-child {
+				margin-bottom:0;
+
+				span {
+					font-weight: 700;
+					color: #f41d1d;
+				}
+			}
+		}
+	}
+
+	.dcart-action {
+		float:right;
+		width:110px;
+		margin-top:-0.4rem;
+
+		.btn {
+			display:block;
+			font-size:0.8rem;
+
+			+ .btn {
+				margin-top: 0.25rem;
+			}
+		}
+	}
+}
+
+/* ----  DROPDOWN / MENU ANIMATIONS BY CLASS 
+Animations - add these clases to the parent element - Navbar Or dropdown
+1.fade - add navbar "fade-dropdown" class
+2.Left To Right - add navbar "ltr-dropdown" class
+3.Right To Left - add navbar "rtl-dropdown" class
+4.Top To Bottom - add navbar "ttb-dropdown" class
+5.Bottom To Top  - add navbar "btt-dropdown" class
+------ */
+
+/* Animation properties via "animated-dropdown" class change duration of animations and etc.. */
+.animated-dropdown .dropdown > .dropdown-menu {
+	animation-fill-mode: both;
+	animation-delay: 0s;
+	animation-duration: 0.5s;
+}
+
+@keyframes fadeDropdown {
+    0% {
+    	opacity:0;
+    }
+    100% {
+    	opacity:1;
+    }
+}
+
+/* Left to right */
+@keyframes leftToRight {
+    0% {
+    	opacity:0;
+    	transform:translateX(-20px);
+    }
+    100% {
+    	opacity:1;
+    	transform:translateX(0);
+    }
+}
+
+ /* Right to left */
+@keyframes rightToLeft {
+    0% {
+    	opacity:0;
+    	transform:translateX(20px);
+    }
+    100% {
+    	opacity:1;
+    	transform:translateX(0);
+    }
+}
+
+/*Top to bottom  */
+@keyframes topToBottom {
+    0% {
+    	opacity:0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+    	opacity:1;
+        transform: translateY(0);
+    }
+}
+
+ /* Bottom to top */
+@keyframes bottomToTop {
+    0% {
+    	opacity:0;
+        transform: translateY(20px);
+    }
+
+    100% {
+    	opacity:1;
+        transform: translateY(0);
+    }
+}
+
+/* fade Animation */
+.fade-dropdown .dropdown.open > .dropdown-menu,
+.fade-dropdown .header-dropdown.dropdown:hover > .dropdown-menu,
+.fade-dropdown .header-dropdown.dropdown:focus > .dropdown-menu {
+	animation-name: fadeDropdown;
+	animation-duration: 0.85s;
+}
+
+/* Left To Right animation */
+.ltr-dropdown .dropdown.open > .dropdown-menu,
+.ltr-dropdown .header-dropdown.dropdown:hover > .dropdown-menu,
+.ltr-dropdown .header-dropdown.dropdown:focus > .dropdown-menu {
+	animation-name: leftToRight;
+}
+
+/* Right To Left animation */
+.rtl-dropdown .dropdown.open > .dropdown-menu,
+.rtl-dropdown .header-dropdown.dropdown:hover > .dropdown-menu,
+.rtl-dropdown .header-dropdown.dropdown:focus > .dropdown-menu {
+	animation-name: rightToLeft;
+}
+
+/* Top To Bottom animation */
+.ttb-dropdown .dropdown.open > .dropdown-menu,
+.ttb-dropdown .header-dropdown.dropdown:hover > .dropdown-menu,
+.ttb-dropdown .header-dropdown.dropdown:focus > .dropdown-menu {
+	animation-name: topToBottom;
+}
+
+/* Bottom To Top animation */
+.btt-dropdown .dropdown.open > .dropdown-menu,
+.btt-dropdown .header-dropdown.dropdown:hover > .dropdown-menu,
+.btt-dropdown .header-dropdown.dropdown:focus > .dropdown-menu {
+	animation-name: bottomToTop;
+}
+
+@media (max-width: $maxmqsm) {
+	/* Dsable Animation for mobile/collapsed menu*/
+	.navbar-collapse .dropdown > .dropdown-menu,
+	.navbar-collapse .dropdown.open > .dropdown-menu {
+		animation:none !important;
+	}
+}

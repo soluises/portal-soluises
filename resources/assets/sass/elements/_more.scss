@@ -1,0 +1,133 @@
+/* More Elements */
+
+/* Bootstrap Carousel */
+.carousel {
+	.item {
+		img {
+			max-width:none;
+			width:100%;
+		}
+
+		.carousel-caption {
+			font-size: 1rem;
+			text-shadow: none;
+		}
+	}
+}
+
+.carousel-control {
+	top: 50%;
+	bottom: auto;
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-top:-1.25rem;
+	font-size: 1rem;
+	line-height: 2.5rem;
+	color: #fff;
+	opacity:1;
+	text-shadow:none;
+	background-color: $first-color;
+	@include transition();
+
+	@media (min-width: $minmqsm) {
+		width: 3.5rem;
+		height: 3.5rem;
+		margin-top:-1.75rem;
+		font-size: 1.3rem;
+		line-height: 3.5rem;
+	}
+
+	&:hover,
+	&:focus {
+		opacity:1;
+		background-color: $second-color;
+	}
+
+	&.left {
+		left:1rem;
+		border-radius: 50%;
+		background-image: none;
+	}
+
+	&.right {
+		right:1rem;
+		border-radius: 50%;
+		background-image: none;
+	}
+}
+
+
+/* Bootstrap Tooltip */
+.tooltip {
+	font-family: $font-family;
+	font-size: 0.9rem;
+}
+
+.tooltip-inner {
+	 padding: 0.4em 0.8em;
+	 border-radius: $radius/2;
+}
+
+
+/* Bootstrap Modal*/
+.modal-dialog {
+	@media (min-width: $minmqsm) {
+		width:480px;
+
+		&.modal-sm {
+			width:360px;
+		}
+	}
+}
+
+.modal-content {
+	border: none;
+	border-radius: 0;
+	background-color: $wrapper-bg-color;
+
+	.modal-header {
+		background-color: $first-color;
+		border:none;
+		padding:1.25rem 1rem;
+
+		.modal-title {
+			font-size:1.6rem;
+			color: #fff;
+		}
+
+		.close {
+			margin-top:0.2rem;
+			font-size:1.6rem;
+			color: #fff;
+			opacity: 0.6;
+			@include transition();
+
+			&:hover,
+			&:focus {
+				opacity:1;
+			}
+		}
+	}
+}
+
+.modal-body {
+	padding:1.5rem 1rem;
+
+	small {
+		font-size: 80%;
+	}
+
+	.form-group {
+		&:last-child {
+			&,
+			.form-control {
+				margin-bottom:6px;
+			}
+		}
+	}
+}
+
+.modal-footer {
+	padding:0.75rem 1rem;
+	border-top-color: $gray;
+}

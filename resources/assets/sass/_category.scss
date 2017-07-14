@@ -1,0 +1,466 @@
+/* Category(Shop) Pages */
+.flex-shop {
+	@media (min-width: $minmqmd) {
+		display:flex;
+		align-items: stretch;
+
+		.col-md-9 {
+			width: 70%;
+
+			+ .col-md-3 {
+				width: 30%;
+			}
+		}
+
+		.col-md-push-3 {
+			left: 30%;
+
+			+ .col-md-pull-9 {
+				right: 70%;
+			}
+
+			&.col-md-6 {
+				left: 25%;
+			}
+		}
+
+		.sidebar {
+			position: relative;
+			
+			&:after {
+				content:'';
+				position: absolute;
+				display:block;
+				background-color: darken($wrapper-bg-color, 7%);
+				left:0;
+				top:-4rem;
+				bottom:0;
+				z-index:0;
+				width:3000px;
+			}
+
+			&.col-md-pull-9,
+			&.col-md-pull-6 {
+				&:after {
+					left: auto;
+					right:0;
+				}
+			}
+
+			.widget {
+				position: relative;
+				z-index:1;
+			}
+		}
+	}
+
+	@media (min-width: $minmqlg) {
+		// change padding and width's of columns
+		&.row {
+			margin-left:-30px;
+			margin-right: -30px;
+
+			> [class*="col-"] {
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+		}
+	}
+}
+
+.category-filter-row {
+	margin-bottom:2rem;
+	padding: 0.95rem 1.1rem;
+	background-color: #fff;
+	border-radius: $radius;
+
+	.left {
+		white-space: nowrap;
+
+		.filter-container {
+			float:left;
+
+			&.filter-show {
+				float:right;
+			}
+		}
+
+		@media (min-width: $minmqsm) {
+			float:left;
+			margin-bottom:0;
+
+			.filter-container, {
+				float:left;
+
+				&.filter-show {
+					float:left;
+				}
+			}
+
+			.filter-sort {
+				margin-right: 25px;
+			}
+		}
+
+		&:after {
+			content:'';
+			display:table;
+			clear:both;
+		}
+	}
+
+	.right {
+		margin-bottom:10px;
+		white-space: nowrap;
+		@media (min-width:$minmqsm) {
+			float:right;
+			margin-bottom:0;
+		}
+
+		&:after {
+			content:'';
+			display:table;
+			clear:both;
+		}
+	}
+
+	label,
+	.form-control {
+		display:inline-block;
+		vertical-align: middle;
+		margin-bottom:0;
+		width: auto;
+	}
+
+	label,
+	.cat-product-count {
+		margin-right:0.5rem;
+		font-size: 0.95rem;
+		font-weight: 700;
+	}
+
+	.form-control {
+		padding-left:0.5rem;
+		padding-right:0.5rem;
+		background-color: $wrapper-bg-color;
+		border-color: $wrapper-bg-color;
+	}
+
+	&:after {
+		content:'';
+		display:table;
+		clear:both;
+	}
+
+	.cat-product-count,
+	.btn,
+	.filter-product-view {
+		display:inline-block;
+		vertical-align:middle;
+	}
+
+	.btn + .btn {
+		margin-left:0.5rem;
+	}
+
+	.cat-product-count {
+		line-height:2rem;
+		margin-right:1.5rem;
+	}
+
+	.cat-product-count {
+		@media (max-width: $maxmqsm) {
+			float:left;
+		}
+	}
+
+	.filter-product-view  {
+		font-size:0;
+
+		.btn {
+			text-align:center;
+			font-size:1.4rem;
+			padding: 0.25em 0.55em;
+			i {
+				margin:0;
+			}
+		}
+		@media (max-width: $maxmqsm) {
+			float:right;
+		}
+	}
+}
+
+
+/* Sidebar */
+.sidebar.shop-sidebar {
+	@media (max-width: $maxmqmd) {
+		margin-bottom:3rem;
+	}
+	
+	.widget {
+		margin-bottom:4rem;
+
+		.widget-title {
+			margin-bottom: 1.25rem;
+		}
+
+		.panel {
+			.panel-title {
+				font-weight: 600;
+			}
+
+			.panel-body {
+				margin:0;
+				background-color: transparent;
+			}
+		}
+
+		.btn {
+			color: #fff;
+		}
+	}
+}
+
+.category-widget-btn {
+	display:block;
+	width:20px;
+	height:20px;
+	font-family: 'FontAwesome';
+	font-size:10px;
+	line-height: 21px;
+	text-align: center;
+	color: $first-color;
+	background-color: #eaeaea;
+	border-radius: 50%;
+	position: absolute;
+	left:10px;
+	top:8px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+
+	&:after {
+		content: "\f105";
+	}
+
+	&:hover,
+	&:focus {
+		background-color: #333;
+		color:#fff;
+	}
+}
+
+.open .category-widget-btn:after {
+	content: "\f107";
+}
+
+.filter-price {
+	.form-control {
+		margin-bottom: 1.25rem;
+	}
+}
+
+.filter-price-label {
+	font-size:0.9rem;
+	font-weight:600;
+	margin-bottom: 0.25rem;
+}
+
+.filter-color-container,
+.filter-size-container  {
+	font-size:0;
+
+	.row {
+		margin-left:-0.25rem;
+		margin-right:-0.25rem;
+	}
+}
+
+.filter-color-box,
+.filter-size-box {
+	display: inline-block;
+	width:2.2rem;
+	height:2.2rem;
+	margin: 0 0.25rem 0.5rem;
+	@include transition();
+	border-radius: $radius/2;
+	box-shadow: 0 1px 3px rgba(0,0,0, 0.2);
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 2px 5px rgba(0,0,0, 0.4);
+	}
+
+}
+
+.filter-size-box {
+	color: $body-text-color !important;
+	background-color: #fff;
+	font-size:0.9rem;
+	font-weight: 600;
+	line-height:2.2rem;;
+	text-align: center;
+	text-transform: uppercase;
+
+	&.active,
+	&:hover,
+	&:focus {
+		color:#fff !important;
+		background-color: $first-color;
+	}
+}
+
+.sidebar .filter-group-widget .panel-body {
+	padding:35px 0 30px;
+}
+
+.filter-brand-list {
+	margin-top:-10px;
+
+	a {
+		color: $body-text-color;
+		display:block;
+		font-size: 0.9rem;
+		line-height:1.5rem;
+		padding:0.15rem 0;
+		font-weight:500;
+
+		&:hover,
+		&:focus {
+			color: $first-color;
+		}
+
+		i {
+			margin-right: 0.6rem;
+		}
+
+		span {
+			float:right;
+		}
+	}
+}
+
+#filter-range-details.row {
+	margin-left:-5px;
+	margin-right:-5px;
+
+	[class*="col-"] {
+		padding-left:5px;
+		padding-right:5px;
+	}
+}
+
+
+#price-slider {
+	margin:0 0 2.75rem;
+}
+
+/* noUiSlider Styles */
+/* Functional styling;
+* These styles are required for noUiSlider to function.
+* You don't need to change these rules to apply your design.
+*/
+.noUi-target,
+.noUi-target * {
+	-webkit-touch-callout: none;
+	-ms-touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+.noUi-target {
+	position: relative;
+	direction: ltr;
+}
+.noUi-base {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1; /* Fix 401 */
+}
+.noUi-origin {
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	height:6px;
+}
+.noUi-handle {
+	position: relative;
+	z-index: 1;
+}
+.noUi-stacking .noUi-handle {
+/* This class is applied to the lower origin when
+   its values is > 50%. */
+	z-index: 10;
+}
+
+.noUi-state-drag * {
+	cursor: inherit !important;
+}
+
+/* Painting and performance;
+ * Browsers can paint handles in their own layer.
+ */
+.noUi-base {
+	transform: translate3d(0,0,0);
+}
+
+/* Slider size and handle placement;
+ */
+.noUi-horizontal {
+	height: 6px;
+}
+.noUi-horizontal .noUi-handle {
+	width: 1.5rem;
+	height: 1.5rem;
+	left: -0.5rem;
+	top: -0.6rem;;
+}
+
+/* Styling;
+ */
+.noUi-background {
+	background: #fff;
+}
+.noUi-connect {
+	background: $first-color;
+}
+.noUi-origin {
+	border-radius: 0;
+}
+.noUi-target {
+	border-radius: 0;
+	background: #fff;
+}
+
+/* Handles and cursors;
+ */
+.noUi-dragable {
+	cursor: w-resize;
+}
+.noUi-vertical .noUi-dragable {
+	cursor: n-resize;
+}
+.noUi-handle {
+	border-radius: 50px;
+	background: #fff;
+	cursor: default;
+	transition: all 0.5s;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+
+	&:hover {
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+	}
+}
+
+.noUi-handle > div {
+	position: absolute;
+	top:100%;
+	left:50%;
+	transform: translateX(-50%);
+	margin-top:1px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: #5a5a5a;
+}

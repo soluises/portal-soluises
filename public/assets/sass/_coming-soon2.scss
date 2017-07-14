@@ -1,0 +1,200 @@
+/* Countdown 2 */
+.dark {
+	.coming-soon {
+		&.overlay-container {
+			.overlay {
+				opacity: 0.45;
+			}
+		}
+
+		h1 {
+			color: #fff;
+		}
+
+		h2 {
+			color: #f2f2f2;
+		}
+
+		p {
+			color: #eee;
+		}
+
+		.countdown-amount {
+		    color: #fff;
+		}
+
+		.countdown-period {
+		    color: #eee;
+		}
+
+		.soon-newsletter {
+			h3 {
+				color: #f1f1f1;
+			}
+		}
+
+		form {
+			.form-control {
+				background-color: $dark;
+				border-color: $darker;
+				color: #999;
+
+				&::placeholder {
+					color: #999;
+				}
+			}
+		}
+	}
+
+
+	.soon-nav-container {
+		.soon-menu-toggle {
+			border-color: #f1f1f1;
+
+			.icon-bar {
+				&,
+				&:before,
+				&:after {
+					background-color: #f1f1f1;
+				}
+			}
+
+			&:hover {
+				background-color: rgba(0,0,0, 0.55);
+				border-color: #222;
+
+				.icon-bar {
+					&,
+					&:before,
+					&:after {
+						background-color: #fff;
+					}
+				}
+			}
+			
+			&.open {
+				.icon-bar {
+					background: transparent !important;
+				}
+			}
+		}
+
+		.soon-nav {
+			.soon-menu {
+				li {
+					a {
+						color: #f1f1f1;
+						background-color: rgba(0, 0, 0, 0.78);
+					}
+
+					&:hover,
+					&:focus {
+						a {
+							color: #222;
+							background-color: rgba(255, 255, 255, 0.78);
+						}
+					}
+					&.active {
+						a {
+							color: #fff;
+							@include background-opacity($first-color, $opacity: 0.78);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.close-sections-btn {
+		color: #f1f1f1;
+		background-color: lighten($dark, 12%);
+
+		&:hover,
+		&:focus {
+			color: #fff;
+			background-color: $first-color;
+		}
+	}
+
+	.soon-section {
+		color: #eee;
+		background-color: rgba(0, 0, 0, 0.8);
+
+
+		h2,h3 {
+			color: #f1f1f1;
+		}
+
+		.service {
+			i.icon-bg {
+				color: #f1f1f1;
+				background-color: lighten($dark, 8%);
+			}
+
+			&.service-box {
+				background-color: lighten($dark, 4%);
+			}
+
+			&:hover,
+			&:focus {
+				i.icon-bg {
+					color: #fff;
+					background-color: darken($first-color, 6%);
+				}
+			}
+		}
+
+		.member .member-title small {
+			background-color: lighten($dark, 5%);
+			color:#fff;
+		}
+
+		.progress {
+			background-color: lighten($dark, 14%);
+		}
+
+		.progress-container .progress-title {
+			color: #c7c7c7;
+		}
+
+		blockquote {
+			background-color: lighten($dark, 2%);
+		}
+
+		.contact-box {
+			background-color: lighten($dark, 6%);
+
+			strong {
+				color: #b7b7b7;
+			}
+
+			h4 strong {
+				color: #eee;
+			}
+
+			.social-icons .social-icon {
+				color: #a1a1a1;
+
+				&:hover,
+				&:focus {
+					color: $first-color;
+				}
+			}
+
+			a:hover,
+			a:focus {
+				color: darken($first-color, 4%);
+			}
+		}
+
+		.form-control {
+			background-color: lighten($dark, 6%);
+			border-color: $dark;
+			color: #999;
+
+			&::placeholder {
+				color: #999;
+			}
+		}
+	}
+}

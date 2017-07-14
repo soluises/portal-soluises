@@ -1,0 +1,12 @@
+/* Homepages - Index9 */
+.img-margin {
+	@media (min-width: 1360px) {
+		margin-bottom: 110px !important;
+	}
+}
+
+.img-tablet {
+	@media (min-width: 1360px) {
+		margin-top: -3rem;
+	}
+}

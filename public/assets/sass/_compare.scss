@@ -1,0 +1,38 @@
+/* Compare */
+.table-compare {
+	.info-col  {
+		.product {
+
+			figure {
+				width:120px;
+			}
+		}
+	}
+}
+
+.rating-col {
+	width:180px;
+	text-align: center;
+}
+
+.summary-col {
+	width:240px;
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.table-responsive .table tbody > tr > .summary-col {
+	@media (max-width: $maxmqsm) {
+		min-width: 180px;
+		white-space: normal;
+	}
+}
+
+.stock-col {
+	width: 150px;
+	font-weight:600;
+}

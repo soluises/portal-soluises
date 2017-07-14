@@ -1,0 +1,127 @@
+#map {
+	height:380px;
+	background-color: $gray;
+	position: relative;
+
+
+	@media (min-width: $minmqsm) {
+		height: 480px;
+	}
+
+	address {
+		font-size:0.9rem;
+		margin:0;
+		padding:1rem 0.7rem 0.7rem;
+		line-height: 1.5;
+	}
+}
+
+.location-icon {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 0 1.25rem 1rem;
+	width: 2.2rem; 
+	height: 4rem;
+	border-radius: 0.5em/.25em;
+	color: $first-color;
+	background: $gray;
+	@include transition();
+
+	.text-center &,
+	&.text-center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	i {
+		position: relative;
+		z-index:2;
+		font-size:1.4rem;
+	}
+
+	&:before,
+	&:after {
+		position: absolute;
+		width: inherit; height: inherit;
+		border-radius: inherit;
+		background: inherit;
+		content: '';
+		top:0;
+	}
+
+	&:before {
+		transform: rotate(60deg);
+		left:0;
+	}
+
+	&:after {
+		transform: rotate(-60deg);
+		right:0;
+	}
+	
+	// Custom
+	&.custom {
+		background-color: $first-color;
+		color: #fff;
+	}
+	
+	// Custom 2
+	&.custom2 {
+		background-color: $second-color;
+		color: #fff;
+	}
+	
+	// Dark
+	&.dark {
+		background-color: $dark;
+		color: #fff;
+	}
+}
+
+
+.location-info {
+	margin-bottom:2.5rem;
+	line-height:1.5;
+
+	address {
+		line-height:1.5;
+	}
+
+	address {
+		margin-bottom:0.4rem;
+	}
+
+	p {
+		margin-bottom:0.35rem;
+	}
+
+	.social-icons {
+		margin-top: 0.75rem;
+	}
+
+	&.location-info-box {
+		padding:1.6rem 1rem 0.7rem;
+		background-color: #fff;
+
+		@media (min-width: $minmqsm) {
+			padding:2rem 1.25rem 0.8rem;
+		}
+
+		@media (min-width: $minmqmd) {
+			padding:2.25rem 1.5rem 1rem;
+		}
+
+		.social-icons {
+			.social-icon {
+				background-color: $gray; 
+
+				&:hover,
+				&:focus {
+					background-color: $first-color;
+				}
+			}
+		}
+	}
+}

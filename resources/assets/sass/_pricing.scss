@@ -1,0 +1,115 @@
+.pricing-table {
+	position: relative;
+	text-align:center;
+	margin-bottom:2.5rem;
+
+	@media (min-width: $maxmqmd) {
+		margin-bottom:4rem;
+	}
+
+	header {
+		background-color: $first-color;
+		color:#fff;
+		padding:1.9rem 0;
+
+		.fullwidth-row .col-md-3:nth-of-type(2n) & {
+			background-color: darken($first-color, 5%);
+		}
+
+		.pricing-title {
+			font-size:1.25rem;
+			font-weight:600;
+			color: #fff;
+			padding-bottom: 1.7rem;
+			border-bottom: 1px solid lighten($first-color, 8%);
+			margin-bottom: 1.9rem;
+		}
+
+		.price {
+			font-size:3.6rem;
+			line-height:1;
+			font-weight: 700;
+
+			span {
+				font-size: 50%;
+				vertical-align:super;
+			}
+		}
+
+		.price-dur {
+			display:block;
+			font-size:0.9rem;
+		}
+	}
+
+	.pricing-body {
+		background-color: #f6f6fa;
+		padding:1.5rem 1.25rem;
+
+		.fullwidth-row .col-md-3:nth-of-type(2n) & {
+			background-color: #fff;
+		}
+
+		ul {
+			margin-bottom:1rem;
+
+			&:last-child {
+				margin-bottom:0;
+			}
+
+			li {
+				padding:0.75rem 0;
+
+				&:nth-child(2n+1) {
+					background-color: $wrapper-bg-color;
+				}
+
+				i {
+					font-size:90%;
+					margin-right:0.5rem;
+					color: lighten($body-text-color, 20%);
+				}
+
+				&.disabled {
+					text-decoration: line-through;
+				}
+			}
+		}
+
+		.price-action {
+			margin-top:20px;
+		}
+	}
+	
+	/* Active */
+	&.active {
+		@media (min-width: $minmqmd) {
+			margin-top:-1.25rem;
+
+			header {
+				padding-top:2.6rem;
+				padding-bottom: 1.9rem;
+
+				.pricing-title {
+					padding-bottom:2.25rem;
+					margin-bottom:1.9rem;
+				}
+			}
+		}
+	}
+	
+	/* Dark */
+	&.dark {
+		header {
+			background-color: $dark;
+
+			.fullwidth-row .col-md-3:nth-of-type(2n) & {
+				background-color: darken($dark, 4%);
+			}
+
+			.pricing-title {
+				border-bottom-color: lighten($dark, 9%);
+			}
+		}
+	}
+}

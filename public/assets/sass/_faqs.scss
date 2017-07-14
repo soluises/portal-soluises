@@ -1,0 +1,42 @@
+.sidebar.faqs-sidebar {
+	margin-bottom:20px;
+
+	.widget {
+		&:last-child {
+			margin-bottom:0;
+		}
+
+		.faqs-cat-list {
+			counter-reset: count-faqs;
+
+			li {
+			counter-increment: count-faqs;
+			padding:0.6rem 1rem;
+			background-color: #f8f8fa;
+			margin-bottom: 0.5rem;
+
+				&:before {
+					position: relative;
+					font-weight:600;
+					content: counter(count-faqs);
+					font-size:1.5rem;
+					line-height:1;
+					color: $first-color;
+					margin-right:0.5rem;
+					vertical-align:middle;
+					top: -0.1rem;
+				}
+
+				a {
+					color: $body-text-color;
+					vertical-align:middle;
+
+					&:hover,
+					&:focus {
+						color: $first-color;
+					}
+				}
+			}
+		}
+	}
+}

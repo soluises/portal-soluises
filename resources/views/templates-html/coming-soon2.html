@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bold - Multipurpose Template</title>
+        <meta name="description" content="Multipurpose bootstrap template">
+
+        <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Google Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,600,700" rel="stylesheet">
+
+        <link rel="stylesheet" href="assets/css/plugins.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/icons/faviconx57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/faviconx72.png">
+
+        <!-- Modernizr -->
+        <script src="assets/js/modernizr.js"></script>
+    </head>
+    <body>
+        <div id="page-loader">
+            <div class="sk-double-bounce">
+                <div class="sk-child sk-double-bounce1"></div><!-- End .sk-child -->
+                <div class="sk-child sk-double-bounce2"></div><!-- End .sk-child -->
+            </div><!-- End .sk-double-bounce -->
+        </div><!-- End #page-loader -->
+        
+        <div class="coming-soon overlay-container text-center text-white" style="background-image:url(assets/images/coming-soonbg2.jpg)">
+            <div class="overlay"></div><!-- End .overlay -->
+
+            <div class="container-fluid">
+                <a href="#" class="site-logo" title="Bold - Multipurpose Template">
+                    <img src="assets/images/logo-white.png" data-rjs="3" alt="Logo">
+                </a>
+                <h1 class="text-white">Coming Soon</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt repudiandae autem omnis, deleniti ready to go quia architecto corrupti ad cupiditate, blanditiis iusto placeat libero cum similr unt minima qui.</p>
+
+                <div class="soon-countdown"></div><!-- End .soon-countdown -->
+
+                <div class="soon-newsletter">
+                    <h3 class="text-white">Subscribe to our newsletter:</h3>
+                    <form action="#">
+                        <input type="email" class="form-control" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-custom2">Subscribe</button>
+                    </form>
+                </div>
+            </div><!-- End .container-fluid -->
+        </div><!-- End .coming-soon -->
+        
+        <!-- End -->
+        <script src="assets/js/plugins.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/jquery.plugin.min.js"></script>
+        <script src="assets/js/jquery.countdown.min.js"></script>
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/contact.js"></script>
+
+        <script>
+            $(function() {
+                "use strict";
+
+                // Countdown
+                if ($.fn.countdown) {
+                    $('.soon-countdown').countdown({
+                        until: new Date(2017, 6, 10), // 7th month = August / Months 0 - 11 (January  - December)
+                        format: 'DHMS',
+                        padZeroes: true
+                    });
+
+                    // $('.soon-countdown').countdown('pause'); // Pause to countdown to view on firebug
+                }
+            }); 
+        </script>
+    </body>
+</html>

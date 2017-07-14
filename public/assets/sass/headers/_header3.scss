@@ -1,0 +1,171 @@
+/* Header Version 3 */
+.header.header3 {
+	.header-inner {
+		.container,
+		.container-fluid {
+			position: relative;
+			display:table;
+			table-layout: fixed;
+
+			@media (max-width: $maxmqsm) {
+				width: 100%;
+			}
+		}
+
+		.container-fluid {
+			width: 100%;
+		}
+
+		.container {
+			@media (max-width: $maxmqsm) {
+				width: 100%;
+			}
+		}
+
+		.social-icons {
+			margin:0;
+			.social-icon {
+				font-size:0.85rem;
+				margin:0 0.1rem;
+				width: auto;
+				min-width:2rem;
+				height:2rem;
+				line-height:2rem;
+				border-radius: 50%;
+				background-color: #fff;
+				text-align: center;
+
+				&:hover,
+				&:focus {
+					color: #fff;
+					background-color: $first-color;
+				}
+			}
+
+			&.pull-left {
+				.social-icon:first-child {
+					margin-left: 0;
+				}
+			}
+
+			&.pull-right {
+				.social-icon:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	
+	.header-left,
+	.header-center,
+	.header-right {
+		display: table-cell;
+		vertical-align: middle;
+		width: 33.3%;
+
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+
+	.header-center {
+		text-align:center;
+		@media (max-width: $maxmqsm) {
+			width: 100%;
+			padding:2rem 0;
+		}
+	}
+
+	.site-logo {
+		display: inline-block;
+		float: none;
+		line-height:0;
+		margin:0;
+	}
+
+	.header-left {
+		.cart-dropdown {
+			float:left;
+			> a {
+				padding-left:0;
+				padding-right:1.5rem;
+			}
+
+			.dropdown-menu {
+				right: auto;
+				left:0;
+			}
+		}
+	}
+
+	.header-left,
+	.header-right {
+		@media (max-width: $maxmqsm) {
+			width: 1%;
+		}
+		.cart-dropdown {
+			@media (max-width: $maxmqsm) {
+				position: absolute;
+				top: 100%;
+				margin-top:0.2rem;
+				right:1.5rem;
+				> a {
+					padding:0.5rem 0 0;
+					color: darken($first-color, 10%);
+				}
+
+				&.open,
+				&:hover,
+				&:focus {
+					> a {
+						color: darken($first-color, 18%);
+					}
+				}
+
+				.dropdown-menu {
+					left: auto;
+					right:0;
+					width: 300px;
+				}
+			}
+
+			@media (max-width: $maxmqxss) {
+				.dropdown-menu {
+					width: 260px;
+				}
+			}
+		}
+	}
+
+	.navbar-nav:not(.navbar-nav-table) {
+		font-size:0;
+		@media (min-width: $minmqsm) {
+			text-align: center;
+		}
+
+		li {
+			font-size:1rem;
+		}
+
+		> li {
+			@media (min-width: $minmqsm) {
+				float:none;
+				display:inline-block;
+			}
+
+			&:first-child {
+				> a {
+					@media (min-width: $minmqsm) {
+						padding-left:0.7rem;
+					}
+
+					@media (min-width: $minmqmd) {
+						padding-left: 1rem;
+					}
+				}
+			}
+		}
+	}
+}

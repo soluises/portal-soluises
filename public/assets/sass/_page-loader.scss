@@ -1,0 +1,48 @@
+/* Page Loader Animation */
+#page-loader {
+	position: fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	z-index: 9999;
+	background-color: $wrapper-bg-color;
+	text-align: center;
+	overflow: hidden;
+}
+
+.sk-double-bounce {
+	width: 3rem;
+	height: 3rem;
+	position: relative;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left: -1.5rem;
+	margin-top: -1.5rem;
+}
+
+.sk-double-bounce .sk-child {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: $first-color;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: sk-doubleBounce 2s infinite ease-in-out;
+}
+
+.sk-double-bounce .sk-double-bounce2 {
+	animation-delay: -1.0s;
+}
+
+@keyframes sk-doubleBounce {
+	0%, 100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+}

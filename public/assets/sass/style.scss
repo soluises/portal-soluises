@@ -1,0 +1,175 @@
+/* 
+Template Name: Bold - Multipurpose Html5 Template
+Template URI: http://www.eonythemes.com
+Description: Multipurpose, premium, bootstrap based html5 template
+Author: Eon
+
+-------- # Table Of Contents # -------- //
+-------- 1-  General
+-------- 2-  Typography
+-------- 3-  Elements
+-------- 4-  Pricing
+-------- 5-  Headers
+-------- 6-  Homepages
+-------- 7-  About
+-------- 8-  Services Pages
+-------- 9-  Blog
+-------- 10- Portfolio
+-------- 11- Category(Shop) - Product
+-------- 12- Shopping Cart
+-------- 13- Compare
+-------- 14- Checkout
+-------- 15- Contact Pages
+-------- 16- 404 Page
+-------- 17- FaQs Page
+-------- 18- 404 Page
+-------- 19- Footers
+-------- 20- Swiper Plugin
+-------- 21- Coming Soon
+-------- # Table Of Contents # ------- //
+*/
+
+@import 'variables';
+@import 'mixins';
+
+@import 'page-loader';
+/* ----------- 1.General --------------
+--------------------------------------*/
+@import 'general';
+
+
+/* ----------- 2.Typography -----------
+--------------------------------------*/
+@import 'typography';
+
+
+/* ----------- 3.Elements ------------
+--------------------------------------*/
+@import 'elements/titles';
+@import 'elements/pageheaders';
+@import 'elements/collapses';
+@import 'elements/tabs';
+@import 'elements/buttons';
+@import 'elements/forms';
+@import 'elements/progressbars';
+@import 'elements/services';
+@import 'elements/text-blocks';
+@import 'elements/tables';
+@import 'elements/callouts';
+@import 'elements/alerts';
+@import 'elements/counters';
+@import 'elements/more';
+@import 'elements/pagination';
+@import 'elements/social-icons';
+
+
+/* ----------- 4.Pricing ---------------
+--------------------------------------*/
+@import 'pricing';
+
+
+/* ----------- 5.Headers ---------------
+--------------------------------------*/
+@import 'headers/header';
+@import 'headers/menu';
+@import 'headers/header2';
+@import 'headers/header3';
+@import 'headers/header4';
+@import 'headers/sidemenu';
+@import 'headers/sidemenu-dark';
+@import 'headers/header-colors';
+@import 'headers/sticky-header';
+
+
+/* ----------- 6.Homepages -------------
+--------------------------------------*/
+@import 'homepages/index';
+@import 'homepages/index3';
+@import 'homepages/index5';
+@import 'homepages/index8';
+@import 'homepages/index9';
+@import 'homepages/index-shop';
+@import 'homepages/index-shop2';
+@import 'homepages/index-shop3';
+@import 'homepages/index-portfolio';
+@import 'homepages/index-photography';
+@import 'homepages/index-blog';
+@import 'homepages/index-blog2';
+@import 'homepages/index-onepage';
+
+
+/* ----------- 7.About -----------------
+--------------------------------------*/
+@import 'about';
+
+
+/* ----------- 8.Services Pages --------
+--------------------------------------*/
+@import 'services-pages';
+
+
+/* ----------- 9.Blog -----------------
+--------------------------------------*/
+@import 'blog';
+
+
+/* ----------- 10.Portfolio -------------
+--------------------------------------*/
+@import 'portfolio';
+
+
+/* ----------- 11.Category(Shop) - Product
+--------------------------------------*/
+@import 'products';
+@import 'category';
+
+
+/* ----------- 12.Shoppng Cart ---------
+--------------------------------------*/
+@import 'cart';
+
+
+/* ----------- 13.Compare ---------------
+--------------------------------------*/
+@import 'compare';
+
+
+/* ----------- 14.Checkout -------------
+--------------------------------------*/
+@import 'checkout';
+
+
+/* ----------- 15.Contact Pages --------
+--------------------------------------*/
+@import 'contact';
+
+
+/* ----------- 16.404 Page --------------
+--------------------------------------*/
+@import '404';
+
+
+/* ----------- 17.FaQS Page --------------
+--------------------------------------*/
+@import 'faqs';
+
+
+/* ---------- 18.Login/Regsiter --------
+--------------------------------------*/
+@import 'login';
+
+
+/* ---------- 19.Footers ---------------
+--------------------------------------*/
+@import 'footers';
+
+
+/* ---------- 20.Swiper Plugin --------
+--------------------------------------*/
+@import 'swiper';
+
+
+/* --------- 21.Coming Soon -----------
+--------------------------------------*/
+@import 'coming-soon';
+@import 'coming-soon2';

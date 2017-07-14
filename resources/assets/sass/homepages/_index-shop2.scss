@@ -1,0 +1,57 @@
+/* Index Shop 2*/
+.nav.nav-pills{
+	&.style2 {
+		> li {
+			> a {
+				font-weight: 700;
+				font-size: 1rem;
+				padding-top: 1.2rem;
+				padding-bottom: 1.2rem;
+				background-color: darken($wrapper-bg-color, 5%);
+			}
+
+			&:nth-child(2n) {
+				> a {
+					background-color: darken($wrapper-bg-color, 10%);
+				}
+			}
+
+			&.active {
+				> a {
+					background-color: $first-color;
+				}
+			}
+
+			&:hover,
+			&:focus {
+				> a {
+					background-color: $second-color;
+				}
+			}
+
+			> a {
+				@media (min-width: $minmqsm) {
+					
+				}
+			}
+		}
+
+		&.nav-justified {
+			> li {
+
+				&:last-child {
+					border-bottom:none;
+				}
+
+				@media (min-width: $minmqsm) {
+					border-bottom: none;
+					border-right: none;
+
+					&:last-child {
+						border-right:none;
+					}
+				}
+			}
+		}
+	}
+}

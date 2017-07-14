@@ -1,0 +1,107 @@
+/* Homepages - Index Onepage */
+.section {
+	padding: 4rem 0;
+
+	@media (min-width: $minmqsm) {
+		padding: 5rem 0;
+	}
+
+	@media (min-width: $minmqmd) {
+		padding: 6rem 0;
+	}
+
+	&#home {
+		padding:0;
+	}
+
+	&#about {
+		padding-bottom:2rem;
+
+		@media (min-width: $minmqsm) {
+			padding-bottom:3rem;
+		}
+
+		@media (min-width: $minmqmd) {
+			padding-bottom:4rem;
+		}
+	}
+
+	&#contact {
+		padding-bottom:2.5rem;
+
+		@media (min-width: $minmqsm) {
+			padding-bottom:3.5rem;
+		}
+
+		@media (min-width: $minmqmd) {
+			padding-bottom:4.5rem;
+		}
+	}
+
+	.pagination-container.min-width {
+		margin-bottom:0 !important;
+	}
+
+	#map {
+		margin-bottom:2.5rem;
+
+		@media (min-width: $minmqsm) {
+			margin-bottom:3.5rem;
+		}
+	}
+}
+
+.section-title {
+	font-size:3.5rem;
+	font-weight: 700;
+	margin-bottom:3rem;
+
+	@media (min-width: $minmqxs) {
+		font-size:4rem;
+	}
+
+	@media (min-width: $minmqsm) {
+		font-size:5rem;
+	}
+
+	@media (min-width: $minmqmd) {
+		font-size:6rem;
+		margin-bottom:3.5rem;
+	}
+}
+
+.section {
+	&.section-with-header {
+		padding-top:0;
+
+		.section-header {
+			padding-top:4rem;
+			padding-bottom:4rem;
+			margin-bottom:3rem;
+			background-color: darken($wrapper-bg-color, 6%);
+
+			@media (min-width: $minmqsm) {
+				padding-top:5rem;
+				padding-bottom:5rem;
+				margin-bottom:3.5rem;
+			}
+
+			@media (min-width: $minmqmd) {
+				padding-top:6rem;
+				padding-bottom:6rem;
+				margin-bottom:4rem;
+			}
+
+			.section-title {
+				margin-bottom:0;
+			}
+			
+			&.bg-image,
+			&.parallax {
+				.section-title {
+					color: #fff;
+				}
+			}
+		}
+	}
+}

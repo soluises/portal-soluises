@@ -1,0 +1,136 @@
+/* Elements Counters */
+
+.count-title {
+	font-size:1.1rem;
+	margin-bottom:2rem;
+}
+
+.count {
+	display: block;
+	color: $first-color;
+	font-size:2rem;
+	font-weight: 700;
+	font-family: $font-family;
+	margin-bottom: 0.4rem;
+}
+
+.count-icon {
+	display: inline-block;
+	height:3rem;
+	width:3rem;
+	border-radius: 50%;
+	background-color: #f6f6fa;
+	color: $first-color;
+	font-size:1rem;
+	line-height:3rem;
+	margin-bottom: 0.3rem;
+	text-align: center;
+
+	&.custom {
+		background-color: $first-color;
+		color: #fff;
+	}
+
+	&.gray {
+		background-color: $gray;
+		color: #222;
+	}
+
+	&.dark {
+		background-color: $dark;
+		color: #fff;
+	}
+}
+
+.count-container {
+	@media (min-width: $minmqxs) {
+		.count-icon {
+			float:left;
+		}
+
+		.count,
+		.count-title {
+			margin-left: 4rem;
+		}
+
+		.count {
+			margin-top: -0.5rem;
+		}
+
+		&:after {
+			content:'';
+			display: table;
+			clear:both;
+		}
+	}
+
+	@media (max-width: $maxmqxs) {
+		text-align:center;
+	}
+	
+}
+
+.count-box {
+	padding: 1rem 1rem 1.6rem;
+	background-color: $gray;
+	margin-bottom: 30px;
+	@include transition();
+
+	.count-title {
+		margin-bottom:0;
+	}
+
+	.count-icon {
+		margin-top:5px;
+	}
+
+	&:hover {
+		background-color: $gray2;
+	}
+	
+	/* Custom count box */
+	&.custom {
+		background-color: $first-color;
+		color: #fff;
+
+		.count,
+		.count-title {
+			color:#fff;
+		}
+
+		.count-icon {
+			background-color: darken($first-color, 12%);
+		}
+
+		&:hover {
+			background-color: darken($first-color, 6%);
+
+			.count-icon {
+				background-color: darken($first-color, 15%);
+			}
+		}
+	}
+	
+	/* Dark count box */
+	&.dark {
+		background-color: $dark;
+		color: #fff;
+
+		.count {
+			color: $first-color;
+		}
+
+		.count-title {
+			color: #fff;
+		}
+
+		.count-icon {
+			color:#fff;
+			background-color: $first-color;
+		}
+
+		&:hover {
+			background-color: $darker;
+		}
+	}
+}

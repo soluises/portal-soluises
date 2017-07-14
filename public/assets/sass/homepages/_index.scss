@@ -1,0 +1,25 @@
+/* Homepages - Index */
+.slider-container {
+	background-color: darken($wrapper-bg-color, 10%);
+	margin-bottom: 3rem;
+
+	@media (min-width: $minmqsm) {
+		margin-bottom: 3.5rem
+	}
+
+	@media (min-width: $minmqmd) {
+		height:600px;
+		margin-bottom: 4rem;
+	}
+
+	// set height as screen's height
+	&.fullheight {
+		height: 100vh;
+	}
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}

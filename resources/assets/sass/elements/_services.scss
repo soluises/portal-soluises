@@ -1,0 +1,437 @@
+/* Elements Sass */
+.service {
+	margin-bottom:2rem;
+	text-align: center;
+
+	> i {
+		// Custom
+		font-size:2.6rem;
+		margin-bottom: 1.2rem;
+
+		&.custom {
+			color: $first-color;
+		}
+		
+		// Custom 2
+		&.custom2 {
+			color: $second-color;
+		}
+		
+		// Gray
+		&.gray {
+			color: $gray;
+		}
+	}
+
+	.service-icon {
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin: 0 auto 1.2rem;
+		width: 2.5rem;
+		height: 4.25rem;
+		border-radius: 0.5em/.25em;
+		color: $first-color;
+		background: $gray;
+		@include transition();
+
+		i {
+			position: relative;
+			z-index:2;
+			font-size:1.45rem;
+		}
+
+		&:before,
+		&:after {
+			position: absolute;
+			width: inherit; height: inherit;
+			border-radius: inherit;
+			background: inherit;
+			content: '';
+			top: 0;
+		}
+
+		&:before {
+			transform: rotate(60deg);
+			left:0;
+		}
+
+		&:after {
+			transform: rotate(-60deg);
+			right:0;
+		}
+		
+		// Custom
+		&.custom {
+			background-color: $first-color;
+			color: #fff;
+		}
+		
+		// Custom 2
+		&.custom2 {
+			background-color: $second-color;
+			color: #fff;
+		}
+		
+		// Dark
+		&.dark {
+			background-color: $dark;
+			color: #fff;
+		}
+	}
+
+	img {
+		display: inline-block;
+		max-width: 100%;
+		height: auto;
+		margin-bottom:20px;
+	}
+
+	.service-title {
+		font-size:1.25rem;
+		margin-bottom:1rem;
+
+		a {
+			color: $heading-color;
+
+			&:hover,
+			&:focus {
+				color: $first-color;
+			}
+		}
+
+		&:last-child {
+			margin-bottom:0;
+		}
+	}
+
+	p {
+		max-width: 94%;
+		margin-left:auto;
+		margin-right: auto;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+
+	&.service-box {
+		position: relative;
+		background-color: #fff;
+		padding:1.8rem 1rem;
+		text-align: center;
+		@include transition();
+
+		&.service-icon-top {
+			padding-top:3.8rem;
+			margin:2rem 0 3rem;
+
+			.service-icon {
+				position: absolute;
+				left:50%;
+				bottom: 100%;
+				margin-bottom: -2.1rem;
+				transform: translateX(-50%);
+			}
+		}
+
+		&:hover {
+			color:#fff;
+			background-color: $first-color !important;
+
+			.service-icon.custom {
+				background-color: darken($first-color, 12%);
+			}
+
+			.service-title {
+				color:#fff;
+
+				a {
+					color: $lightgray;
+
+					&:hover,
+					&:focus {
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		// Gray 
+		&.gray:not(.service-border) {
+			background-color: $gray !important;
+
+			.service-icon {
+				color: $heading-color;
+				background-color: darken($gray, 10%);
+			}
+
+			&:hover {
+				color: $body-text-color;
+				background-color: darken($gray, 10%) !important;
+
+				a {
+					color: $heading-color;
+
+					&:hover,
+					&:focus {
+						color: $first-color;
+					}
+				}
+
+				.service-icon {
+					background-color: $gray;
+				}
+			}
+		}
+
+		// Custom 
+		&.custom:not(.service-border) {
+			color:#fff;
+			background-color: $first-color !important;
+
+			.service-icon {
+				color: #fff;
+				background-color: darken($first-color, 10%);
+			}
+
+			.service-title {
+				color: $lightgray;
+				a {
+					color: $lightgray;
+
+					&:hover,
+					&:focus {
+						color: #fff;
+					}
+				}
+			}
+
+			&:hover {
+				background-color: darken($first-color, 10%) !important;
+
+				.service-icon {
+					background-color: $first-color;
+				}
+			}
+		}
+
+		// Custom  2
+		&.custom2:not(.service-border) {
+			color:#fff;
+			background-color: $second-color !important;
+
+			.service-icon {
+				color: #fff;
+				background-color: darken($second-color, 10%);
+			}
+
+			.service-title {
+				color: $lightgray;
+				a {
+					color: $lightgray;
+
+					&:hover,
+					&:focus {
+						color: #fff;
+					}
+				}
+			}
+
+			&:hover {
+				background-color: darken($second-color, 10%) !important;
+
+				.service-icon {
+					background-color: $second-color;
+				}
+			}
+		}
+
+		// Dark 
+		&.dark:not(.service-border) {
+			color:#fff;
+			background-color: $dark !important;
+
+			.service-icon {
+				color: #fff;
+				background-color: lighten($dark, 10%);
+			}
+
+			.service-title {
+				color: $lightgray;
+				a {
+					color: $lightgray;
+
+					&:hover,
+					&:focus {
+						color: #fff;
+					}
+				}
+			}
+
+			&:hover {
+				background-color: darken($dark, 10%) !important;
+
+				.service-icon {
+					background-color: $dark;
+				}
+			}
+		}
+	}
+
+	&.service-border {
+		background-color: transparent;
+		border:1px solid $gray;
+
+		&:hover {
+			border-color:darken($first-color, 10%);
+		}
+		
+		// Custom
+		&.custom {
+			background-color: transparent !important;
+			border-color: $first-color;
+
+			.service-icon {
+				color:#fff;
+				background-color: $first-color;
+			}
+
+			&:hover {
+				background-color: $first-color !important;
+				border-color: darken($first-color, 10%);
+
+				.service-icon {
+					background-color: darken($first-color, 10%);
+				}
+			}
+		}
+
+		// Custom 2
+		&.custom2 {
+			background-color: transparent !important;
+			border-color: $second-color;
+
+			.service-icon {
+				color:#fff;
+				background-color: $second-color;
+			}
+
+			&:hover {
+				background-color: $second-color !important;
+				border-color: darken($second-color, 10%);
+
+				.service-icon {
+					background-color: darken($second-color, 10%);
+				}
+			}
+		}
+
+		// Dark
+		&.dark {
+			background-color: transparent !important;
+			border-color: $dark;
+
+			.service-icon{
+				color:#fff;
+				background-color: $dark;
+			}
+
+			&:hover {
+				background-color: $dark !important;
+				border-color: darken($dark, 10%);
+
+				.service-icon {
+					background-color: lighten($dark, 10%);
+				}
+			}
+		}
+	}
+
+	&.icon-left {
+		> i {
+			font-size:2.1rem;
+			float:left;
+			margin-bottom:0;
+		}
+
+		.service-icon {
+			float:left;
+			width: 2rem; 
+			height:3.4rem;
+			margin-left:1rem;
+
+			i {
+				font-size:1.25rem;
+			}
+		}
+
+		.service-title,
+		p {
+			margin-left: 5.2rem;
+			text-align: left;
+		}
+
+
+		&.no-icon-bg {
+			.service-title,
+			p {
+				margin-left: 3.8rem;
+			}
+		}
+
+		&.reverse {
+			> i {
+				float:right;
+			}
+
+			.service-icon {
+				float:right;
+				margin-left:0;
+				margin-right: 1rem;
+			}
+
+			.service-title,
+			p {
+				margin-left: 0;
+				margin-right: 5.2rem;
+				text-align: right;
+			}
+
+			&.no-icon-bg {
+				.service-title,
+				p {
+					margin-left: 0;
+					margin-right:  3.8rem;
+				}
+			}
+		}
+
+		&:hover {
+			.icon-bg {
+				color:#fff;
+				background-color: $first-color;
+				
+				// Custom
+				&.custom {
+					color:#fff;
+					background-color: darken($first-color, 10%);
+				}
+
+				// Custom 2
+				&.custom2 {
+					color:#fff;
+					background-color: darken($second-color, 10%);
+				}
+
+				// Dark
+				&.dark {
+					color:#fff;
+					background-color: lighten($dark, 8%);
+				}
+			}
+		}
+	}
+}

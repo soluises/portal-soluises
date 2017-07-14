@@ -1,0 +1,61 @@
+/* Homepages - Index-shop3 */
+.collection-section {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	color:#fff;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	h2,h3,h4 {
+		color: #fff;
+		text-shadow: 0 2px 5px rgba(0,0,0, 0.2);
+	}
+
+	h2 {
+		font-size: 2.75rem;
+		margin-bottom: 0.3em;
+	}
+
+	h3 {
+		font-size: 2rem;
+		font-weight:300;
+		margin-bottom: 0.6em;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	p {
+		display:none;
+		text-shadow: 0 1px 3px rgba(0,0,0, 0.2);
+		margin-bottom: 1.75rem;
+		
+		@media (min-width: $minmqsm) {
+			display:block;
+			max-width:680px;
+		}
+
+		@media (min-width: $minmqmd) {
+			max-width:780px;
+		}
+	}
+
+	.btn {
+		box-shadow: 0 2px 5px rgba(0,0,0, 0.2);
+
+		&:hover,
+		&:focus {
+			box-shadow: 0 4px 8px rgba(0,0,0, 0.4);
+		}
+	}
+
+	&.text-center {
+		p {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

@@ -1,0 +1,204 @@
+/* Countdown 1 */
+.coming-soon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	width:100%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding: 4.5rem 0;
+
+	.container-fluid {
+		margin-left:0;
+		margin-right:0;
+	}
+
+	.site-logo {
+		float:none;
+		display:inline-block;
+		margin: 0 0 1.2rem;
+
+		@media (min-width: $minmqsm) {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	h1 {
+		font-size:3rem;
+		margin-bottom: 1.5rem;
+
+		@media (min-width: $minmqxs) {
+			margin-bottom: 1.75rem;
+		}
+
+		@media (min-width: $minmqsm) {
+			font-size:4.5rem;
+			margin-bottom: 2.2rem;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size:6rem;
+			margin-bottom: 2.75rem;
+		}
+	}
+
+	p {
+		display:none;
+		font-size:1rem;
+		line-height:1.5;
+		max-width: 720px;
+		margin: 0 auto 1.4rem;
+
+		@media (min-width: $minmqxs) {
+			display:block;
+		}
+
+		@media (min-width: $minmqsm) {
+			font-size:1.1rem;
+			margin-bottom: 1.5rem;
+		}
+
+		@media (min-width: $minmqmd) {
+			max-width: 800px;
+			font-size: 1.25rem;
+		}
+	}
+
+	.soon-countdown {
+		max-width: 680px;
+		margin: 0 auto 2.2rem;
+
+		@media (min-width: $minmqsm) {
+			margin-bottom: 2.5rem;
+		}
+
+		@media (min-width: $minmqmd) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.countdown-amount {
+	    font-size: 2.5rem;
+	    font-weight:700;
+		color: $first-color;
+	    line-height: 1;
+
+	    @media (min-width: $minmqxs) {
+			font-size: 2.75rem;;
+		}
+
+	    @media (min-width: $minmqsm) {
+			font-size:4rem;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size: 5rem;
+		}
+	}
+
+	.countdown-period {
+		color: inherit;
+	    font-size:1.1rem;
+	    font-weight: 600;
+	    line-height:1.4;
+
+	    @media (min-width: $minmqsm) {
+			font-size: 1.25rem;
+	    	line-height:1.6;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size: 1.25rem;
+		}
+	}
+
+	.soon-newsletter {
+		max-width: 480px;
+		margin: 0 auto;
+
+		h3 {
+			font-weight:600;
+			font-size: 1.1rem;
+			margin-bottom:1rem;
+
+			@media (min-width: $minmqsm) {
+				font-size:1.25rem;
+				margin-bottom:1rem;
+			}
+		}
+	}
+
+	form {
+		position: relative;
+
+		.form-control {
+			padding-right: 110px;
+			margin-bottom:0;
+		}
+
+		.btn {
+			position: absolute;
+			right:0;
+			top:0;
+		}
+	}
+}
+
+/* jQuery Countdown styles 2.0.0. */
+.countdown-section {
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+.countdown-period {
+    display: block;
+}
+
+.countdown-descr {
+	display: block;
+	width: 100%;
+}
+
+.countdown-row {
+	clear: both;
+	width: 100%;
+	padding: 0px;
+	text-align: center;
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.countdown-show1 .countdown-section {
+	width: 98%;
+}
+
+.countdown-show2 .countdown-section {
+	width: 48%;
+}
+
+.countdown-show3 .countdown-section {
+	width: 32.5%;
+}
+
+.countdown-show4 .countdown-section {
+	width: 24.5%;
+}
+
+.countdown-show5 .countdown-section {
+	width: 19.5%;
+}
+
+.countdown-show6 .countdown-section {
+	width: 16.25%;
+}
+
+.countdown-show7 .countdown-section {
+	width: 14%;
+}

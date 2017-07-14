@@ -1,0 +1,158 @@
+/* Cart */
+.delete-btn,
+.cart-btn {
+	display:inline-block;
+	color: $body-text-color;
+	background-color: $wrapper-bg-color;
+	font-size:0.8rem;
+	min-width:2rem;
+	height:2rem;
+	line-height:2rem;
+	text-align:center;
+	border-radius:50%;
+	@include transition();
+
+	&:hover,
+	&:focus {
+		background-color: $first-color;
+		color: #fff;
+	}
+}
+
+.info-col  {
+	.product {
+		margin:0;
+		padding:6px 0;
+
+		figure {
+			position: relative;
+			display:inline-block;
+			vertical-align:middle;
+			width:100px;
+			margin-right:1rem;
+
+			@media (min-width: $minmqsm) {
+				margin-right:1.4rem;
+			}
+
+			img {
+				display:block;
+				width:100%;
+				height:auto;
+			}
+		}
+
+		.product-title {
+			font-size:1.1rem;
+			margin:0 0 0.75rem;
+		}
+
+		.product-info {
+			display:inline-block;
+			vertical-align:top;
+
+			ul {
+				font-size:0.9rem;
+				color: #444;
+				li {
+					margin-bottom:1px;
+				}
+				span {
+					display:inline-block;
+					min-width:100px;
+					font-weight:600;
+				}
+			}
+		}
+
+		&:after {
+			content:'';
+			display:table;
+			clear:both;
+		}
+	}
+}
+
+.price-col {
+	font-weight:700;
+	width: 160px;
+	font-size:1.1rem;
+	text-align:center;
+}
+
+.quantity-col {
+	width: 160px;
+	text-align:center;
+	.form-control {
+		display:inline-block;
+		max-width:110px;
+		margin-bottom:0;
+		text-align:center;
+	}
+}
+
+.subtotal-col {
+	width: 160px;
+	text-align:center;
+	color: #e53935;
+	font-weight:700;
+	font-size:1.1rem;
+}
+
+.delete-col {
+	width:80px;
+	text-align:center;
+}
+
+.shipping-container {
+	margin-top:1rem;
+
+	.form-control,
+	.form-group {
+		margin-bottom:1rem;
+	}
+
+	.form-group {
+		.form-control {
+			margin-bottom:0;
+		}
+	}
+
+	@media (min-width: $minmqmd) {
+		margin-top:0;
+	} 
+}
+
+/* Total Table */
+.table.total-table {
+	font-weight: 700;
+	margin:2.5rem 0 1.5rem;
+
+	tr {
+		td {
+			width:50%;
+
+			&:first-child {
+				text-align: right;
+			}
+
+			&:last-child {
+				text-align: center;
+			}
+		}
+
+		&:last-child {
+			td:last-child {
+				color: #e53935;
+			}
+		}
+
+		&.total-row {
+			font-size:1.25rem;
+		}
+	}
+
+	@media (min-width: $minmqmd) {
+		margin-top:0;
+	} 
+}

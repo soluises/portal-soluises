@@ -1,0 +1,166 @@
+/* Elements Collapses */
+.panel-group {
+	.panel + .panel {
+		margin-top: 0.4rem;
+	}
+
+	.panel-heading + .panel-collapse > .panel-body {
+		border-top: none;
+	}
+}
+
+.panel {
+	background-color: transparent;
+	margin-bottom: 40px;
+	border-radius: 0;
+	border: none;
+	box-shadow: none;
+
+	.panel-heading {
+		padding:0;
+		border-radius: 0;
+		border:none;
+
+		.panel-title {
+			font-weight:400;
+			position: relative;
+			font-size: 1rem;
+			font-family: $font-family;
+
+			a {
+				border: 1px solid darken($wrapper-bg-color, 15%);
+				display: block;
+				padding: 1rem 2.5rem 1rem 1rem;
+				color: $body-text-color;
+				background-color: darken($wrapper-bg-color, 15%);
+				@include transition();
+				border-radius: $radius/2;
+
+				@media (min-width: $minmqmd) {
+					padding: 1.15rem 3rem 1.15rem 1.5rem;
+				}
+
+				&:hover,
+				&:focus {
+					color: $body-text-color;
+					background-color: darken($wrapper-bg-color, 19%);
+					border-color: darken($wrapper-bg-color, 19%);
+				}
+
+				&:before {
+					position: absolute;
+					right:1rem;
+					top:50%;
+					display: inline-block;
+					font-family: 'FontAwesome';
+					content: "\f107";
+					transform: translateY(-50%);
+
+					@media (min-width: $minmqmd) {
+						right:1.5rem;
+					}
+				}
+
+				&.collapsed {
+					&:before {
+						content: "\f105";
+					}
+				}
+			}
+		}
+	}
+
+	.panel-body {
+		background-color: #fff;
+		padding: 1.1rem 1rem;
+		border-radius: $radius/2;
+		margin-top: 0.4rem;
+
+		.bg-white & {
+			background-color: $lightgray;
+		}
+
+		@media (min-width: $minmqmd) {
+			padding: 1.5rem 1.5rem;
+		}
+
+		p {
+			margin-bottom: 13px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	/* Panel Default */
+	&.panel-default {
+		.panel-heading {
+			a {
+				color: #333;
+				background-color: $gray;
+				border-color: $gray;
+
+				&:hover,
+				&:focus {
+					color: #333;
+					background-color: $gray2;
+					border-color: $gray2;
+				}
+			}
+		}
+	}
+
+	/* Panel White */
+	&.panel-white {
+		.panel-heading {
+			a {
+				background-color: #fff;
+				border-color: #fff;
+
+				&:hover,
+				&:focus {
+					color: #fff;
+					background-color: $first-color;
+					border-color: $first-color;
+				}
+			}
+		}
+	}
+
+	/* Panel Inverse */
+	&.panel-inverse {
+		.panel-heading {
+			a {
+				background-color: $dark;
+				border-color: $dark;
+				color:#fff;
+
+				&:hover,
+				&:focus {
+					color:#fff;
+					background-color: $darker;
+					border-color: $darker;
+				}
+			}
+		}
+	}
+
+	/* Panel Custom */
+	&.panel-custom {
+		.panel-heading {
+			a {
+				background-color: $first-color;
+				border-color: darken($first-color, 5%);
+				color:#fff;
+
+				&:hover,
+				&:focus {
+					color: #fff;
+					background-color: darken($first-color, 5%);
+					border-color: darken($first-color, 10%);
+				}
+			}
+		}
+	}
+}

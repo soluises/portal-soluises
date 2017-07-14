@@ -1,0 +1,81 @@
+/* Homepages - Index Blog 2 */
+.featured-entry-slider.swiper-container {
+	margin-bottom: 3rem;
+
+	@media (min-width: $minmqmd) {
+		margin-bottom: 4rem;
+	}
+}
+
+.fentry-slide {
+	img {
+		display:block;
+		height:auto;
+		width: 100%;
+	}
+
+	.fentry-slide-content {
+		position: absolute;
+		top:50%;
+		left: 5rem;
+		right:5rem;
+		transform: translateY(-50%);
+		transition: all 0.4s;
+		z-index:20;
+		color: #fff;
+		text-align: center;
+
+		h2 {
+			color: #fff;
+			font-size:1rem;
+			max-width:250px;
+			line-height:1.35;
+			margin: 0 auto 0.5rem;
+			font-weight: 700;
+			text-shadow: 0 1px 3px rgba(0,0,0, 0.3);
+			max-width: 420px;
+
+			@media (min-width: $minmqxs) {
+				font-size:1.3rem;
+			}
+
+			@media (min-width: $minmqsm) {
+				font-size:1.6rem;
+			}
+
+			@media (min-width: $minmqmd) {
+				font-size:2.1rem;
+				margin-bottom:0.75rem;
+				max-width: 520px;
+			}
+
+			a {
+				color: #fff;
+
+				&:hover,
+				&:focus {
+					color: $first-color;
+				}
+			}
+		}
+
+		.fentry-tags {
+			display:none;
+			text-shadow: 0 1px 2px rgba(0,0,0, 0.3);
+			font-size:1.1rem;
+
+			@media (min-width: $minmqsm) {
+				display:block;
+			}
+
+			a {
+				color: #fff;
+
+				&:hover,
+				&:focus {
+					color: $first-color;
+				}
+			}
+		}
+	}
+}

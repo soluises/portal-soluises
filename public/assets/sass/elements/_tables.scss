@@ -1,0 +1,158 @@
+/* Elements Tables */
+.table {
+	margin-bottom: 2rem;
+	background-color: #fff;
+	thead {
+		> tr {
+			border-top:1px solid $first-color;
+			border-bottom:1px solid $first-color;
+
+			> th {
+				font-size:1.2rem;
+				font-weight:700;
+				letter-spacing: 0.04em;
+				font-family: $font-family;
+				color:#fff;
+				padding:1.1rem 1rem;
+				background-color: $first-color;
+				border-color: $first-color;
+
+				@media (min-width: $minmqmd) {
+					padding: 1.25rem 1.75rem;
+				}
+			}
+		}
+	}
+	
+	tbody {
+		> tr {
+			border-top:1px solid $gray;
+			border-bottom:1px solid $gray;
+			> td {
+				padding:1.1rem 1rem;
+				vertical-align: middle;
+
+				@media (min-width: $minmqmd) {
+					padding:1.5rem 1.75rem;
+				}
+			}
+		}
+
+		> tr.active {
+			> td:first-child {
+				background-color: #f6f6fa;
+			}
+		}
+		> tr.success {
+			> td:first-child {
+				background-color: #dff0d8;
+			}
+		}
+		> tr.danger {
+			> td:first-child {
+				background-color: #f2dede;
+			}
+		}
+		> tr.info {
+			> td:first-child {
+				background-color: #d9edf7;
+			}
+		}
+
+		> tr.warning {
+			>td,
+			>th,
+			> td:first-child {
+				background-color: #fddfaf;
+			}
+		}
+	}
+
+	&.table-condensed {
+		> thead {
+			> tr {
+				> th,
+				> td {
+					padding: 0.8rem 1rem;
+				}
+			}
+		}
+		> tbody {
+			> tr {
+				> th,
+				> td {
+					padding: 0.8rem 1rem;
+				}
+			}
+		}
+
+		> tfoot {
+			> tr {
+				> th,
+				> td {
+					padding: 0.8rem 1rem;
+				}
+			}
+		}
+	}
+
+	&.table-bordered {
+		> thead {
+			> tr {
+				> th,
+				> td {
+					border-color: lighten($first-color, 10%);
+				}
+			}
+		}
+		> tbody {
+			> tr {
+				> th,
+				> td {
+					border-color:#eaeaea;
+				}
+			}
+		}
+
+		> tfoot {
+			> tr {
+				> th,
+				> td {
+					border-color:#eaeaea;
+				}
+			}
+		}
+	}
+
+	&.table-colored {
+		> thead {
+			> tr {
+				border:none !important;
+				> th,
+				> td {
+					color: #323232;
+					border:none !important;
+				}
+			}
+		}
+		> tbody {
+			> tr {
+				border:none !important;
+
+				> td {
+					border:none !important;
+				}
+			}
+		}
+	}
+
+	&.table-hover {
+		tbody {
+			> tr {
+				&:hover {
+					background-color: #f9f9fe;
+				}
+			}
+		}
+	}
+}

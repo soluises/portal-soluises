@@ -1,0 +1,112 @@
+// services.html
+.client {
+	display:block;
+	@include transition();
+	opacity:0.8;
+	text-align:center;
+
+	img {
+		display:inline-block;
+		max-width:100%;
+		height:auto;
+	}
+
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
+}
+
+.testimonial-box {
+	margin-bottom:1.5rem;
+
+	.swiper-container & {
+		margin-bottom:0;
+	}
+
+	.testimonial-content {
+		position: relative;
+		padding:1.25rem;
+		margin-bottom:0.9rem;
+		background-color: darken($wrapper-bg-color, 6%);
+
+		.bg-wrapper & {
+			background-color: darken($wrapper-bg-color, 13%);
+		}
+
+		@media (min-width: $minmqmd) {
+			padding: 1.4rem;
+		}
+
+		@media (min-width: $minmqmd) {
+			padding: 1.5rem 1.7rem;
+		}
+
+		&:after {
+			content:'';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 2rem 2rem 0;
+			border-color: transparent darken($wrapper-bg-color, 12%) transparent transparent;
+			position: absolute;
+			right:0;
+			top:100%;
+			z-index:10;
+
+			.bg-wrapper & {
+				border-color: transparent darken($wrapper-bg-color, 16%) transparent transparent;
+			}
+		}
+	}
+
+	blockquote {
+		padding:0;
+		font-size:1.1rem;
+		line-height:1.5;
+		margin:0;
+
+		p {
+			margin:0;
+		}
+
+		&:before {
+			font-size:2rem;
+			left:-0.8rem;
+			top:-1rem;
+			color: lighten($wrapper-bg-color, 3%);
+		}
+	}
+
+	.testimonial-owner {
+		display:flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding-right: 2rem;
+
+		figure {
+			max-width: 56px;
+
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+				border-radius: 50%;
+			}
+		}
+
+		h5,h4 {
+			font-size: 1.1rem;
+			margin-right: 0.5rem;
+			margin-bottom: 0;
+			text-align: right;
+
+			span {
+				display: block;
+				font-weight: 400;
+				margin-top: 0.45rem;
+				font-size: 80%;
+			}
+		}
+	}
+}

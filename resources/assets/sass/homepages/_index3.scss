@@ -1,0 +1,41 @@
+/* Homepages - Index3*/
+.slider-container {
+	.hesperiden .tp-thumb.selected {
+		.tp-thumb-image {
+			box-shadow: inset 0 0 0 2px $second-color;
+		}
+	}
+}
+
+.services-section-edge {
+	padding-bottom:130px;
+	@include angled-edge('inside bottom', 'upper right', darken($wrapper-bg-color, 6%), 2800, 150);
+}
+
+.about-section-edge {
+	padding-bottom:140px;
+	@include angled-edge('inside bottom', 'upper left', $wrapper-bg-color, 2800, 150);
+}
+
+.portfolio-section-edge {
+	padding-bottom: 180px;
+	@include angled-edge('inside bottom', 'upper right', darken($wrapper-bg-color, 6%), 2800, 150);
+}
+
+.testimonials-section-edge {
+	padding-bottom: 180px;
+	@include angled-edge('inside bottom', 'upper left', $wrapper-bg-color, 2800, 150);
+}
+
+.news-section-edge {
+	padding-bottom: 180px;
+	@include angled-edge('inside bottom', 'upper left', $dark, 2800, 150);
+}
+
+.footer.footer-edge {
+	> .container,
+	> .container-fluid {
+		padding-top: 3rem;
+		padding-bottom: 2.5rem;
+	}
+}

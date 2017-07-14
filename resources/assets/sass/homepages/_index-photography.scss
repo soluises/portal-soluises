@@ -1,0 +1,104 @@
+/* Homepages - Index Photography */
+.fotorama__thumb-border {
+	border-color: $first-color;
+}
+
+/* Fotorama Navigation Arrows */
+.fotorama__arr {
+	font-family: 'FontAwesome';
+	background-image: none;
+	font-size:1.25rem;
+	color:#fff;
+	@include background-opacity($first-color, 0.5);
+	text-align: center;
+	width: 2.5rem;
+	height:2.5rem;
+	line-height:2.5rem;
+	margin-top: -1.25rem;
+	transition: all 0.4s;
+
+	@media (min-width: $minmqsm) {
+		font-size:22px;
+		width: 3rem;
+		height:3rem;
+		line-height:3rem;
+		margin-top: -1.5rem;
+	}
+
+	@media (min-width: $minmqmd) {
+		font-size:2rem;
+		width: 3.5rem;
+		height:3.5rem;
+		line-height:3.5rem;
+		margin-top: -1.75rem;
+	}
+
+	&:hover,
+	&:focus {
+		@include background-opacity($second-color, 0.7);
+	}
+}
+
+.fotorama__arr--prev {
+	left:0;
+	&:before {
+		content: "\f104";
+	}
+}
+
+.fotorama__arr--next {
+	right:0;
+	&:before {
+		content: "\f105";
+	}
+}
+
+/* Thumbnail over */
+.fotorama-nav-over {
+	.fotorama__nav-wrap {
+		position: absolute;
+		left:0;
+		bottom:20px;
+		z-index:99;
+	}
+}
+
+/* Circle Thumbnails */
+.fotorama-circle-thumbs {
+	.fotorama__thumb,
+	.fotorama__thumb-border {
+		&,
+		& img {
+			border-radius: 50%;
+		}
+	}
+}
+
+/* Caption */
+.fotorama__caption {
+	left:40px;
+	right:40px;
+	font:700 2rem/1 $font-family;
+	bottom:auto;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	text-shadow: 0 2px 5px rgba(0,0,0, 0.65);
+
+	@media (min-width: $minmqsm) {
+		font-size:2.25rem;
+		left:50px;
+		right:50px;
+	}
+
+	@media (min-width: $minmqmd) {
+		font-size:3rem;
+		left:60px;
+		right:60px;
+	}
+
+	.fotorama__caption__wrap {
+		background-color: transparent;
+		color: #fff;
+	}
+}

@@ -1,0 +1,135 @@
+/* Homepages - Index Blog */
+.featured-entry-carousel.swiper-container {
+	margin-bottom: 3rem;
+
+	@media (min-width: $minmqmd) {
+		margin-bottom: 4rem;
+	}
+}
+
+.featured-entry {
+	position: relative;
+	overflow: hidden;
+
+	figure {
+		a {
+			display: block;
+
+			&:after {
+				content:'';
+				position: absolute;
+				left:0;
+				top:0;
+				bottom:0;
+				right:0;
+				background-color: $darker;
+				@include transition();
+				opacity:0;
+				visibility: hidden;
+				z-index:10;
+			}
+		}
+
+		img {
+			display:block;
+			height:auto;
+			width: 100%;
+		}
+	}
+
+	.fentry-content {
+		position: absolute;
+		top:50%;
+		left:0;
+		right:0;
+		padding: 0 1.1rem;
+		@include transition();
+		transform: translateY(-50%);
+		z-index:20;
+
+		@media (min-width: $minmqmd) {
+			padding-left:1.5rem;
+			padding-right: 1.5rem;
+		}
+	}
+
+
+	a {
+		color: #fff;
+
+		&:hover,
+		&:focus {
+			color: $second-color;
+		}
+	}
+
+	h2 {
+		font-size: 1.35rem;
+		font-weight:700;
+		line-height: 1.35;
+		color: #fff;
+		letter-spacing: 0.01em;
+		text-shadow: 1px 0 1px rgba(0,0,0, 0.1);
+		max-width: 280px;
+		margin-bottom:0.75rem;
+
+		@media (min-width: $minmqsm) {
+			font-size:1.5rem;
+			max-width: 340px;
+		}
+	}
+
+	.fentry-meta {
+		font-size:0;
+		color: #eee;
+
+		> span {
+			display:inline-block;
+			font-size:1rem;
+			margin-right: 0.75rem;
+
+			i {
+				margin-right:0.25rem;
+			}
+		}
+	}
+
+	&.bg-custom,
+	&.bg-custom2,
+	&.bg-dark {
+		figure a {
+			&:after {
+				display:none;
+			}
+		}
+	}
+
+	&:not(.bg-custom),
+	&:not(.bg-custom2),
+	&:not(.bg-dark) {
+		figure a {
+			&:after {
+				opacity:0.35;
+				visibility: visible;
+			}
+		}
+	}
+
+	&.bg-custom2 {
+		a {
+			&:hover,
+			&:focus {
+				color: $first-color;
+			}
+		}
+	}
+
+	&:hover {
+		figure a {
+			&:after {
+				opacity:0.7;
+				visibility: visible;
+			}
+		}
+	}
+}

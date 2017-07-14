@@ -1,0 +1,81 @@
+/* Side Menu  - Metis menu */
+.side-menu {
+	li {
+		a {
+			position: relative;
+			display:block;
+			color: #212121;
+			padding:0.2rem 0;
+			font-size: 0.95rem;
+			font-weight: 600;
+
+			> span {
+				position: relative;
+			}
+		}
+
+		&.active,
+		&:hover,
+		&:focus {
+			> a,
+			> a:hover,
+			> a:focus {
+				color: $first-color;
+			}
+		}
+
+		ul {
+			padding-left: 13px;
+
+			li {
+				&:first-child {
+					padding-top:5px;
+				}
+
+				&:last-child {
+					padding-bottom:9px;
+				}
+			}
+		}
+	}
+
+	> li {
+		> a {
+			font-weight: 600;
+			padding:6px 0;
+		}
+	}
+	.collapse {
+		display: none;
+
+		&.in {
+			display: block;
+		}
+	}
+
+	.collapsing {
+		position: relative;
+		height: 0;
+		overflow: hidden;
+		transition-timing-function: ease;
+		transition-duration: .35s;
+		transition-property: height, visibility;
+	}
+
+	.arrow {
+		float: right;
+		line-height: 1.42857;
+
+		*[dir="rtl"] & {
+			float:left;
+		}
+	}
+
+	.fa.arrow:before {
+	  content: "\f105";
+	}
+
+	.active > a > .fa.arrow:before {
+	  content: "\f107";
+	}
+}

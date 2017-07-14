@@ -1,0 +1,274 @@
+/* Elements Titles */
+
+.title {
+	position: relative;
+	padding-bottom:1.2rem;
+
+	&:after {
+		content:'';
+		display:block;
+		width:6rem;
+		height:1px;
+		position: absolute;
+		bottom:0;
+		left:0;
+		background-color: $gray;
+	}
+
+
+	&.text-center {
+		&:after {
+			left:50%;
+			margin-left: -3rem;
+		}
+	}
+
+	&.text-right {
+		&:after {
+			left: auto;
+			right:0;
+		}
+	}
+
+	&.custom {
+		&:after {
+			background-color: $first-color;
+		}
+	}
+
+	&.custom2 {
+		&:after {
+			background-color: $second-color;
+		}
+	}
+
+	&.dark {
+		&:after {
+			background-color:  $dark;
+		}
+	}
+
+	&.text-white,
+	&.white {
+		&:after {
+			background-color: #fff;
+		}
+	}
+
+	&.title-bottom-border:after {
+		height:4px;
+		bottom:-2px;
+	}
+}
+
+.title-desc {
+	font-size:1.1rem;
+	font-weight:300;
+	max-width:720px;
+	margin-bottom:2rem;
+
+	&.text-center {
+		margin-left:auto;
+		margin-right: auto;
+	}
+}
+
+.title-border {
+	padding:0 0 0 0.6em;
+	border-left:2px solid transparent;
+
+	> span {
+		display:inline-block;
+		padding:0 0.6em;
+		background-color: $wrapper-bg-color;
+		position: relative;
+		z-index:1;
+
+		.bg-white & {
+			background-color: #fff !important;
+		}
+
+		.bg-gray & {
+			background-color: $gray !important;
+		}
+
+		.bg-gray2 & {
+			background-color: $gray2 !important;
+		}
+
+		.bg-wrapper & {
+			background-color: darken($wrapper-bg-color, 6%) !important;
+		}
+
+		.bg-custom & {
+			background-color: $first-color !important;
+		}
+
+		.bg-custom2 & {
+			background-color: $second-color !important;
+		}
+
+		.bg-dark & {
+			background-color: $dark-bg !important;
+		}
+	}
+
+	&.text-right,
+	.text-right > & {
+		padding:0 0.6em 0 0;
+		border-left:none;
+		border-right:2px solid transparent;
+	}
+
+
+	&.text-center,
+	.text-center > & {
+		padding:0;
+		border:none;
+
+		> span  {
+			border-left:2px solid transparent;
+			border-right:2px solid transparent;
+		}
+	}
+
+	&.custom,
+	&.text-right.custom,
+	&.text-center.custom > span {
+		border-color: $first-color;
+	}
+
+	&.title-bg-line,
+	&.text-center.title-bg-line,
+	&.title-bg,
+	&.text-center.title-bg {
+		padding:0;
+	}
+
+	.bg-dark & > span {
+		background-color: $dark;
+	}
+
+	.bg-gray & > span {
+		background-color: $gray;
+	}
+
+	.bg-lightgray & > span {
+		background-color: $lightgray;
+	}
+
+	.bg-lightergray & > span {
+		background-color: #fafafa;
+	}
+
+	.bg-gray2 & > span {
+		background-color: $gray2;
+	}
+	
+}
+
+.title-bottom-border.custom {
+	border-color: $first-color;
+}
+
+.title-bg-line,
+.title-underline {
+	position: relative;
+
+	> span {
+		padding:0 0.6em;
+	}
+}
+
+.title-bg-line {
+	&:after {
+		content:'';
+		display:block;
+		height:1px;
+		background-color: transparent;
+		position: absolute;
+		top:50%;
+		left:0;
+		right:0;
+		z-index:0;
+	}
+}
+
+.title-block {
+	margin-bottom:1.75rem;
+	.title {
+		margin-bottom:1rem;
+	}
+
+	.title-desc {
+		margin-bottom:0;
+	}
+
+	> p {
+		font-size:1.1em;
+	}
+}
+
+
+.title > .light,
+.title-block .light {
+	font-weight: normal;
+}
+
+.title-bottom-border {
+	border-bottom:1px solid transparent;
+
+	&.dashed {
+		border-bottom-style: dashed;
+	}
+
+	&.dotted {
+		border-bottom-style: dotted;
+	}
+}
+
+// Dark - Black Colored border
+.title-border.dark,
+.title-border.text-right.dark,
+.title-border.text-center.dark > span,
+.title-bottom-border.dark {
+	border-color: $dark;
+}
+
+.title-border.title-bg.dark,
+.title-bg-line.dark:after{
+	background-color: $dark;
+}
+
+// Gray  Colored border 
+.title-border.gray,
+.title-border.text-right.gray,
+.title-border.text-center.gray > span,
+.title-bottom-border.gray  {
+	border-color: $gray;
+}
+
+.title-border.title-bg.gray,
+.title-bg-line.gray:after {
+	background-color: $gray;
+}
+
+// White Colored border 
+.title-border.white,
+.title-border.text-right.white,
+.title-border.text-center.white > span,
+.title-bottom-border.white  {
+	border-color: #fff;
+}
+
+.title-border.title-bg.white,
+.title-bg-line.white:after {
+	background-color: #fff;
+}
+
+// Custom Colored border
+.title-border.title-bg.custom,
+.title-bg-line.custom:after,
+.bg-custom .title-border > span {
+	background-color: $first-color
+}

@@ -1,0 +1,109 @@
+/* Elements Callouts */
+.container-fluid > .callout,
+.container > .callout {
+	padding-left: 2rem;
+	padding-right:2rem;
+
+	@media (max-width: $maxmqsm) {
+		padding-left: 1rem;
+		padding-right:1rem;
+	}
+}
+
+.callout {
+	padding:2.3rem 0 2.2rem;
+	width:100%;
+	background-color: #fff;
+	margin-bottom:3rem;
+
+	@media (min-width: $minmqsm) {
+		padding:2.8rem 0 2.85rem;
+	}
+
+	.callout-title {
+		font-size:1.6rem;
+		line-height:1.1;
+		color: $body-text-color;
+		margin-bottom:0.4em;
+	}
+
+	.callout-subtitle {
+		font-weight: 400;
+		font-size:1.2rem;
+		line-height:1.4;
+		margin-bottom:1.25em;
+		color: lighten($body-text-color, 10%);
+	}
+
+	> .callout-subtitle {
+		margin-bottom: 1.25em;
+	}
+
+	@media (min-width: $minmqsm) {
+		&,
+		> .container,
+		> .container-fluid {
+			display:table;
+		}
+
+		> .container-fluid {
+			width: 100%;
+		}
+
+		.left,
+		.right {
+			display:table-cell;
+			vertical-align: middle;
+		}
+
+		.right {
+			text-align: right;
+			padding-left:20px;
+		}
+
+		> .callout-title { 
+			margin-top:0.1rem;
+		}
+
+		.callout-title,
+		.callout-subtitle {
+			&:last-child {
+				margin-bottom:0;
+			}
+		}
+	}
+
+	
+	// dark colors
+	&.dark {
+		background-color: $dark;
+		color: #9e9e9e;
+
+		.callout-title {
+			color: #fff;
+		}
+
+		.callout-subtitle {
+			color: $gray2;
+		}
+	}
+	
+	// custom colors
+	&.custom {
+		background-color: $first-color;
+		color: lighten($first-color, 20%);
+
+		.callout-title {
+			color: #fff;
+		}
+
+		.callout-subtitle {
+			color: #dedede;
+		}
+
+		small {
+			color: lighten($first-color, 20%);
+		}
+	}
+
+}

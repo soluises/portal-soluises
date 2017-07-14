@@ -1,0 +1,68 @@
+/* Homepages - Index Portfolio */
+.portfolio-header {
+	padding: 3.25rem 0 3rem;
+
+	@media (min-width: $minmqsm) {
+		padding-top: 4rem;
+		padding-bottom: 3.75rem;
+	}
+
+	@media (min-width: $minmqmd) {
+		padding-top: 4.75rem;
+		padding-bottom:4.5rem;
+	}
+
+	.portfolio-header-title {
+		font-weight:400;
+		line-height: 1.3;
+		font-size:2.25rem;
+
+		@media (min-width: $minmqsm) {
+			font-size:2.5rem;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size:2.8rem;
+
+			&.max-width {
+				max-width: 60%;
+
+				&.text-center {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+
+		@media (min-width: $minmqlg) {
+			font-size:3rem;
+		}
+
+		&:last-child {
+			margin-bottom:0;
+		}
+	}
+
+	.lead {
+		line-height:1.6;
+		margin-bottom:0;
+
+		@media (max-width: $maxmqmd) {
+			&.max-width, 
+			&.max-width-sm{
+				max-width: none;;
+			}
+		}
+	}
+}
+
+@keyframes blink {
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+.typed-cursor{
+	opacity: 1;
+	animation: blink 0.7s infinite;
+}

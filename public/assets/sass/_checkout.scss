@@ -1,0 +1,30 @@
+/* Checkout */
+.table-checkout {
+	font-weight: 700;
+	.total-row {
+		td {
+			&:first-child {
+				text-align: right;
+			}
+
+			&:last-child {
+				text-align: center;
+			}
+		}
+
+		&:last-child {
+			font-size:1.25rem;
+			td:last-child {
+				color: #e53935;
+			}
+		}
+	}
+}
+
+.checkout-action {
+	font-size:0;
+
+	.btn + .btn {
+	margin-left:4px;
+	}
+}

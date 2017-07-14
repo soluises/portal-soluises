@@ -1,0 +1,60 @@
+/////////* Bold Variables *////////////
+$font-family: 'Raleway', sans-serif !default;
+
+// Html
+$root-font-size-xs: 14px;
+$root-font-size-sm: 15px;
+$root-font-size: 16px;
+
+// Body
+$body-text-color: #323232 !default;
+$body-font-size: 1rem;
+$body-line-height: 1.65 !default;
+$body-bg-color: #9a9a9a !default; // You will see this only boxed or boxed-long layout
+
+// Wrapper elem for body
+$wrapper-bg-color: #e8ebec !default; // Background color for content
+
+// Headings
+$heading-color: #212121 !default;
+$heading-line-height: 1 !default;
+
+// General Transition
+$transition-easing:cubic-bezier(.92,.17,.29,.93);
+$transition-duration: 0.65s;
+
+// Radius
+$radius: 8px;
+
+$dark: #181818 !default;
+$darker: #111111 !default;
+
+$dark-bg: #181818 !default;
+$darker-bg: #111111 !default;
+
+$lightgray:#f1f1f1 !default;
+$gray: #d7d4d4 !default;
+$gray2: #cacaca !default;
+
+// Color Scheme
+// first 673AB7 
+// second E91E63
+$first-color: #673AB7 !default;
+$second-color: #E91E63 !default;
+
+// Media Queries 
+// (Max - Min Media Queries - All related to the Bootstrap)
+// Max Media Queries
+$maxmqxss: 360px !default;
+$maxmqxs: 480px !default;
+$maxmqsm: 767px !default;
+$maxmqmd: 991px !default;
+$maxmqlg: 1199px !default;
+
+// Min Media Queries
+$minmqxs: 481px !default;
+$minmqsm: 768px !default;
+$minmqmd: 992px !default;
+$minmqlg: 1200px !default;
+$minmqxlg: 1600px !default;
+$minmqxxlg: 1920px !default;

@@ -1,0 +1,572 @@
+#portfolio-filter {
+	display:inline-block;
+	background-color: #fff;
+	border-radius: $radius;
+	margin:0 0 3rem;
+	font-size:0;
+	padding:0.75rem 1rem;
+
+	@media (min-width: $minmqsm) {
+		margin:0 0 3.5rem;
+	}
+
+	.bg-white & {
+		background-color: $wrapper-bg-color;
+	}
+
+	li {
+		position: relative;
+		display:inline-block;
+		border-radius: $radius;
+
+		a {
+			display:inline-block;
+			color: lighten($body-text-color, 4%);
+			font-size: 0.95rem;
+			font-weight:700;
+			padding:0.65rem 0.9rem;
+			border-radius: $radius;
+			@include transition();
+
+			@media (min-width: $minmqsm) {
+				padding:0.75rem  1.1rem;
+			}
+
+			@media (min-width: $minmqmd) {
+				font-size:0.95rem;
+			}
+
+
+			&:hover,
+			&:focus {
+				color:$first-color;
+			}
+		}
+
+		&.active {
+			background-color: $first-color;
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+
+#portfolio-item-container {
+	@include transition();
+	margin:0 0 3.3rem;
+
+	@media (min-width: $minmqsm) {
+		margin:0 0 3.55rem;
+	}
+
+	@media (min-width: $minmqmd) {
+		margin:0 0 4.1rem;
+	}
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.portfolio-item {
+	position: relative;
+	float: left;
+	margin-bottom:2rem;
+	width:100%;
+	
+	// Clear margin bottom for carousel elems
+	.swiper-container & {
+		margin-bottom:0;
+	}
+	
+	a {
+		color: $body-text-color;
+
+		&:hover,
+		&:focus {
+			color: $first-color;
+		}
+	}
+
+	figure {
+		position: relative;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		&:after {
+			content:'';
+			position: absolute;
+			left:0;
+			right:0;
+			top:0;
+			bottom:0;
+			background-color: $first-color;
+			opacity: 0;
+			visibility:hidden;
+			@include transition();
+			z-index:50;
+		}
+	}
+
+	.zoom-btn {
+		display:inline-block;
+		position: absolute;
+		top:50%;
+		left:50%;
+		width:4rem;
+		height:4rem;
+		margin-top:-2rem;
+		margin-left: -2rem;
+		font-size:1.4rem;
+		line-height:4rem;
+		text-align:center;
+		border-radius: 50%;
+		opacity: 0;
+		visibility:hidden;
+		@include transition();
+		transform: scale(0);
+		z-index: 100;
+		color: $first-color;
+		background-color: rgba(255, 255, 255, 0.85);
+
+		&:hover,
+		&:focus {
+			background-color: rgba(255,255,255, 0.96);
+		}
+	}
+
+	.portfolio-meta {
+		position: relative;
+		margin-top:1.1rem;
+	}
+
+	.portfolio-title {
+		color:  $heading-color;
+		font-size: 1.25rem;
+		line-height:1.3;
+		font-weight:700;
+		margin:0 0 0.45rem;
+
+		.container-fluid .max-col-5 &,
+		.container-fluid .max-col-6 & {
+			@media (min-width: $minmqmd) {
+				font-size: 1.1rem;
+			}
+		}
+	}
+
+	.portfolio-tags {
+		font-weight: 600;
+		font-size: 0.85rem;
+		
+		a {
+			color: lighten($body-text-color, 30%);
+
+			&:hover,
+			&:focus {
+				color: $first-color;
+			}
+		}
+	}
+
+	&:hover {
+		figure {
+			&:after {
+				visibility: visible;
+				opacity:0.45;
+			}
+		}
+
+		.zoom-btn,
+		.link-btn  {
+			visibility: visible;
+			opacity:1;
+			transform: scale(1);
+		}
+	}
+	
+	/* Portfolio No gap */
+	&.portfolio-anim {
+		position: relative;
+		overflow:hidden;
+		margin-bottom:0;
+
+		figure {
+			position: relative;
+
+			&:after {
+				background-color: $second-color;
+			}
+		}
+
+		.zoom-btn {
+			width:3rem;
+			height:3rem;
+			margin-top:-3.8rem;
+			margin-left:-1.5rem;
+			font-size:1.2rem;
+			line-height:3rem;
+			color: #fff;
+			@include background-opacity($first-color, 0.86);
+
+			&:hover,
+			&:focus {
+				@include background-opacity($first-color, 0.98);
+			}
+		}
+
+		.portfolio-meta {
+			position: absolute;
+			left:0;
+			right:0;
+			bottom:0;
+			color: #fff;
+			margin:0;
+			z-index:99;
+			padding:4.5rem 1rem 1.15rem;
+			margin:0;
+			@include linearGradient(transparent, $first-color);
+			@include transition();
+			transform: translateY(100%);
+
+			@media (min-width: $minmqmd) {
+				padding-left:1.5rem;
+				padding-right:1.5rem;
+			}
+		}
+
+		.portfolio-title {
+			font-size:1.2rem;
+			margin:0 0 0.35rem;
+
+			.container-fluid .max-col-5 &,
+			.container-fluid .max-col-6 & {
+				@media (min-width: $minmqmd) {
+					font-size: 1rem;
+				}
+			}
+
+			a {
+				color: #e1e1e1;
+
+				&:hover,
+				&:focus {
+					color:  #fff;
+				}
+			}
+		}
+
+		.portfolio-tags {
+			font-size:0.8rem;
+			color: #aeaeae;
+			a {
+				color: #c1c1c1;
+
+				&:hover,
+				&:focus {
+					color:  #fff;
+				}
+			}
+		}
+
+		&:hover,
+		&:focus {
+			figure {
+				&:after {
+				}
+			}
+
+			.portfolio-meta {
+				transform: translateY(0);
+			}
+		}
+	}
+}
+
+.portfolio-row {
+	margin-left: -15px;
+	margin-right: -15px;
+	
+	> #portfolio-item-container {
+		margin:0 0 1rem;
+
+		@media (min-width: $minmqsm) {
+			margin:0 0 1.75rem;
+		}
+
+		> .portfolio-item {
+			padding:0 15px;
+		}
+	}
+
+	&:after {
+		content:'';
+		display: table;
+		clear: both;
+	}
+}
+
+.max-col-6,
+.max-col-5,
+.max-col-4,
+.max-col-3,
+.max-col-2 {
+	.portfolio-item {
+		@media (min-width: $minmqsm) {
+			width:50%;
+		}
+	}
+}
+
+.max-col-4,
+.max-col-3 {
+	.portfolio-item {
+		@media (min-width: $minmqmd) {
+			width:33.3%;
+		}
+	}
+}
+
+.max-col-6,
+.max-col-5{
+	.portfolio-item {
+		@media (min-width: $minmqmd) {
+			width:25%;
+		}
+	}
+}
+
+.max-col-4 {
+	.portfolio-item {
+		@media (min-width: $minmqlg) {
+			width:25%;
+			&.wide {
+				width:50%;
+			}
+		}
+	}
+}
+
+.max-col-5 {
+	.portfolio-item {
+		@media (min-width: $minmqlg) {
+			width:20%;
+			&.wide {
+				width:40%;
+			}
+		}
+	}
+}
+
+.max-col-6 {
+	.portfolio-item {
+		@media (min-width: $minmqlg) {
+			width:16.66%;
+			&.wide {
+				width:33.3%;
+			}
+		}
+	}
+}
+
+/* Light gallery lightbox custom css */
+.lg-backdrop {
+	background-color: #f4f4f4;
+}
+
+#lg-counter {
+	color: $body-text-color;
+	font-size: 1rem;
+	font-weight: 500;
+
+	@media (max-width: 420px) {
+		display:none;
+	}
+}
+
+.lg-toolbar .lg-icon,
+.lg-outer .lg-toogle-thumb {
+	color: $body-text-color;
+	@include transition();
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: $first-color;
+	}
+}
+
+.lg-outer .lg-toogle-thumb {
+	border-radius: $radius/2 $radius/2 0 0;
+}
+
+.lg-actions .lg-next, 
+.lg-actions .lg-prev, 
+.lg-sub-html, 
+.lg-toolbar,
+.lg-outer .lg-thumb-outer,
+.lg-outer .lg-toogle-thumb {
+	@include background-opacity($gray, 0.8);
+}
+
+.lg-actions .lg-next, 
+.lg-actions .lg-prev {
+	border-radius: $radius/2;
+	@include transition();
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: $first-color;
+	}
+}
+
+.lg-outer {
+	.lg-thumb {
+		padding: 0.25rem 0;
+	}
+	.lg-thumb-item {
+		border-radius: 0;
+
+		&.active,
+		&:hover {
+			border-color: $first-color;
+		}
+	}
+}
+
+/* Single Portfolio */
+.portfolio-post-media {
+	margin-bottom:0.6rem;
+
+	@media (min-width: $minmqsm) {
+		margin-bottom:0.3rem;
+	}
+
+	img {
+		display:block;
+		width:100%;
+		height:auto;
+		margin-bottom:15px;
+
+		@media (min-width: $minmqsm) {
+			margin-bottom:30px;
+		}
+	}
+
+	.embed-responsive,
+	.fluid-width-video-wrapper, {
+		margin-bottom:15px;
+
+		@media (min-width: $minmqsm) {
+			margin-bottom:25px;
+		}
+	}
+
+	.single-portfolio-gallery {
+		margin-bottom:15px;
+
+		@media (min-width: $minmqsm) {
+			margin-bottom:20px;
+		}
+
+		@media (min-width: $minmqmd) {
+			margin-bottom:25px;
+		}
+
+		img {
+			margin-bottom:0;
+		}
+	}
+
+	.single-portfolio-thumbs-wrapper {
+		padding:10px 8px;
+		background-color: darken($wrapper-bg-color, 7%);
+
+		margin-bottom:15px;
+
+		@media (min-width: $minmqsm) {
+			margin-bottom:23px;
+		}
+
+		@media (min-width: $minmqmd) {
+			margin-bottom:30px;
+		}
+	}
+	
+	.single-portfolio-gallery-thumbs {
+		img {
+			margin-bottom:0;
+		}
+
+		.swiper-slide {
+			padding: 4px;
+
+			@media (min-width: $minmqsm) {
+				padding:6px;
+			}
+
+			@media (min-width: $minmqmd) {
+				padding:8px;
+			}
+		}
+
+		.swiper-slide-active {
+			background-color: $second-color;
+		}
+	}
+}
+
+.portfolio-post-content {
+	margin-bottom:2rem;
+
+	.portfolio-title {
+		font-size:2rem;
+		line-height:1.25;
+		margin-bottom:0.75em;
+	}
+
+	ul {
+		padding: 0.8rem 1rem 0.35rem;
+		background-color: darken($wrapper-bg-color, 7%);
+		margin-bottom:1.65rem;
+
+		@media (min-width: $minmqsm) {
+			padding: 0.9rem 1.5rem 0.5rem;
+		}
+
+		li {
+			padding:0.45rem 0;
+			margin-bottom:0.25em;
+			border-bottom:1px solid darken($wrapper-bg-color, 12%);
+
+			> span {
+				display: inline-block;
+				font-weight:700;
+				margin-right:0.5rem;
+				min-width: 80px;
+			}
+
+			i {
+				margin-right:0.4rem;
+			}
+
+			&:last-child {
+				border-bottom:none;
+			}
+		}
+	}
+}
+
+.portfolio-related-carousel {
+	.portfolio-item {
+		margin-bottom:0;
+	}
+}
