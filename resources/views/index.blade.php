@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Bold - Multipurpose Template</title>
+        <title>Soluises</title>
         <meta name="description" content="Multipurpose bootstrap template">
 
         <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
@@ -18,12 +18,12 @@
         <link rel="stylesheet" href=" {{ asset('/css/style.css') }}">
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/icons/faviconx57.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/faviconx72.png">
+        <link rel="icon" type="image/png" href=" {{ asset('/images/icons/favicon.png') }}">
+        <link rel="apple-touch-icon" sizes="57x57" href=" {{ asset('/images/icons/faviconx57.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href=" {{ asset('/images/icons/faviconx72.png') }}">
 
         <!-- Modernizr -->
-        <script src="assets/js/modernizr.js"></script>
+        <script src=" {{ asset('/js/modernizr.js') }}"></script>
     </head>
     <body>
         <div id="page-loader">
@@ -88,7 +88,7 @@
                 <div class="header-inner">
                     <div class="container-fluid">
                         <a href="index.html" class="site-logo" title="Bold - Multipurpose Template">
-                            <img src="assets/images/logo.png" data-rjs="3" alt="Bold Logo">
+                            <img src="{{ asset('/images/logo.png') }}" data-rjs="3" alt="Bold Logo">
                             <span class="sr-only">Bold</span>
                         </a>
 
@@ -106,7 +106,7 @@
                                     <div class="product">
                                         <figure>
                                             <a href="#">
-                                                <img src="assets/images/products/thumbs/product1.jpg" alt="Product">
+                                                <img src=" {{ asset('/images/products/thumbs/product1.jpg') }}" alt="Product">
                                             </a>
                                         </figure>
                                         <div class="product-meta">
@@ -123,7 +123,7 @@
                                     <div class="product">
                                         <figure>
                                             <a href="#">
-                                                <img src="assets/images/products/thumbs/product2.jpg" alt="Product">
+                                                <img src=" {{ asset('/images/products/thumbs/product2.jpg') }}" alt="Product">
                                             </a>
                                         </figure>
                                         <div class="product-meta">
