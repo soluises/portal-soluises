@@ -11,19 +11,19 @@
         <!-- Google Fonts -->
         <link href="http://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,600,700" rel="stylesheet">
 
-        <link rel="stylesheet" href=" {{ asset('/css/plugins.min.css') }}">
-        <link rel="stylesheet" href=" {{ asset('/css/settings.css') }}">
-        <link rel="stylesheet" href=" {{ asset('/css/layers.css') }}">
-        <link rel="stylesheet" href=" {{ asset('/css/navigation.css') }}">
-        <link rel="stylesheet" href=" {{ asset('/css/style.css') }}">
+        <link rel="stylesheet" href="{{asset('/assets/css/plugins.min.css')}}">
+        <link rel="stylesheet" href="{{asset('/assets/css/settings.css')}}">
+        <link rel="stylesheet" href="{{asset('/assets/css/layers.css')}}">
+        <link rel="stylesheet" href="{{asset('/assets/css/navigation.css')}}">
+        <link rel="stylesheet" href="{{asset('/assets/css/style.css')}}">
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href=" {{ asset('/images/icons/favicon.png') }}">
-        <link rel="apple-touch-icon" sizes="57x57" href=" {{ asset('/images/icons/faviconx57.png') }}">
-        <link rel="apple-touch-icon" sizes="72x72" href=" {{ asset('/images/icons/faviconx72.png') }}">
+        <link rel="icon" type="image/png" href="{{asset('/assets/images/icons/favicon.png')}}">
+        <link rel="apple-touch-icon" sizes="57x57" href="{{asset('/assets/images/icons/faviconx57.png')}}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{asset('/assets/images/icons/faviconx72.png')}}">
 
         <!-- Modernizr -->
-        <script src=" {{ asset('/js/modernizr.js') }}"></script>
+        <script src="{{asset('/assets/js/modernizr.js')}}"></script>
     </head>
     <body>
         <div id="page-loader">
@@ -88,7 +88,7 @@
                 <div class="header-inner">
                     <div class="container-fluid">
                         <a href="index.html" class="site-logo" title="Bold - Multipurpose Template">
-                            <img src="{{ asset('/images/logo.png') }}" data-rjs="3" alt="Bold Logo">
+                            <img src="{{asset('/assets/images/logo.png')}}" data-rjs="3" alt="Bold Logo">
                             <span class="sr-only">Bold</span>
                         </a>
 
@@ -106,7 +106,7 @@
                                     <div class="product">
                                         <figure>
                                             <a href="#">
-                                                <img src=" {{ asset('/images/products/thumbs/product1.jpg') }}" alt="Product">
+                                                <img src="{{asset('/assets/images/products/thumbs/product1.jpg')}}" alt="Product">
                                             </a>
                                         </figure>
                                         <div class="product-meta">
@@ -123,7 +123,7 @@
                                     <div class="product">
                                         <figure>
                                             <a href="#">
-                                                <img src=" {{ asset('/images/products/thumbs/product2.jpg') }}" alt="Product">
+                                                <img src="{{asset('/assets/images/products/thumbs/product2.jpg')}}" alt="Product">
                                             </a>
                                         </figure>
                                         <div class="product-meta">
@@ -665,7 +665,7 @@
                             <li data-index="rs-1" data-transition="slideoverup" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1200"  data-thumb="assets/images/homepages/index/slide1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Bold">
 
                                 <!-- MAIN IMAGE -->
-                                <img src="assets/images/homepages/index/slide1.jpg"  alt="Slider bg 1"  data-bgposition="center center" data-duration="11000" data-ease="Linear.easeNone" class="rev-slidebg" data-no-retina>
+                                <img src=" {{ asset('/assets/images/homepages/index/slide1.jpg') }} " alt="Slider bg 1"  data-bgposition="center center" data-duration="11000" data-ease="Linear.easeNone" class="rev-slidebg" data-no-retina>
                                 <!-- LAYERS -->
 
                                 <!-- LAYER NR. 1 - overlay -->
@@ -778,10 +778,10 @@
                                 </a>
                             </li>
                             <!-- SLIDE  -->
-                            <li data-index="rs-2" data-transition="slideoverdown" data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1200" data-thumb="assets/images/homepages/index/slide2-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Purchase">
+                            <li data-index="rs-2" data-transition="slideoverdown" data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1200" data-thumb=" {{ asset('/images/homepages/index/slide2-100x50.jpg') }}" data-rotate="0" data-saveperformance="off" data-title="Purchase">
 
                                 <!-- MAIN IMAGE -->
-                                <img src="assets/images/homepages/index/slide2.jpg"  alt="Slider bg 2"  data-bgposition="center center" data-duration="11000" data-ease="Linear.easeNone" class="rev-slidebg" data-no-retina>
+                                <img src=" {{ asset('/assets/images/homepages/index/slide2.jpg') }} " alt="Slider bg 2"  data-bgposition="center center" data-duration="11000" data-ease="Linear.easeNone" class="rev-slidebg" data-no-retina>
                                 <!-- LAYERS -->
 
                                 <!-- LAYER NR. 1 - overlay -->
@@ -1084,9 +1084,9 @@
                         <div id="portfolio-item-container" class="popup-gallery max-col-4" data-layoutmode="fitRows">
                             <div class="portfolio-item web-design wordpress">
                                 <figure>
-                                    <img src="assets/images/portfolio/grid/item1.jpg" alt="Portfolio Name">
+                                    <img src=" {{ asset('/assets/images/portfolio/grid/item1.jpg') }} " alt="Portfolio Name">
                                     <figcaption>
-                                        <a href="assets/images/portfolio/grid/item1.jpg" data-thumb="assets/images/portfolio/grid/item1.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href=" {{ asset('/assets/images/portfolio/grid/item1.jpg') }} " data-thumb=" {{ asset('/assets/images/portfolio/grid/item1.jpg') }} " class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
@@ -1100,7 +1100,7 @@
 
                             <div class="portfolio-item web-design marketing">
                                 <figure>
-                                    <img src="assets/images/portfolio/grid/item2.jpg" alt="Portfolio Name">
+                                    <img src=" {{ asset('/assets/images/portfolio/grid/item2.jpg') }} " alt="Portfolio Name">
                                      <figcaption>
                                         <a href="http://www.youtube.com/watch?v=jt8YicG-F6c" data-thumb="assets/images/portfolio/grid/item2.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
@@ -1116,9 +1116,9 @@
 
                             <div class="portfolio-item wordpress">
                                 <figure>
-                                    <img src="assets/images/portfolio/grid/item3.jpg" alt="Portfolio Name">
+                                    <img src=" {{ asset('/assets/images/portfolio/grid/item3.jpg') }} " alt="Portfolio Name">
                                     <figcaption>
-                                        <a href="assets/images/portfolio/grid/item3.jpg" data-thumb="assets/images/portfolio/grid/item3.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href=" {{ asset('/assets/images/portfolio/grid/item3.jpg') }} " data-thumb=" {{ asset('/assets/images/portfolio/grid/item3.jpg') }} " class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
@@ -1132,9 +1132,9 @@
 
                             <div class="portfolio-item web-design wordpress">
                                 <figure>
-                                    <img src="assets/images/portfolio/grid/item4.jpg" alt="Portfolio Name">
+                                    <img src=" {{ asset('/assets/images/portfolio/grid/item4.jpg') }} " alt="Portfolio Name">
                                     <figcaption>
-                                        <a href="assets/images/portfolio/grid/item4.jpg" data-thumb="assets/images/portfolio/grid/item4.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href=" {{ asset('/assets/images/portfolio/grid/item4.jpg') }} " data-thumb=" {{ asset('/assets/images/portfolio/grid/item4.jpg') }} " class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
@@ -1148,9 +1148,9 @@
 
                             <div class="portfolio-item logo-design video marketing">
                                 <figure>
-                                    <img src="assets/images/portfolio/grid/item5.jpg" alt="Portfolio Name">
+                                    <img src=" {{ asset('/assets/images/portfolio/grid/item5.jpg') }} " alt="Portfolio Name">
                                     <figcaption>
-                                        <a href="assets/images/portfolio/grid/item5.jpg" data-thumb="assets/images/portfolio/grid/item5.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href=" {{ asset('/assets/images/portfolio/grid/item5.jpg') }} " data-thumb=" {{ asset('/assets/images/portfolio/grid/item5.jpg') }} " class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
@@ -1164,9 +1164,9 @@
 
                             <div class="portfolio-item logo-design wordpress">
                                 <figure>
-                                    <img src="assets/images/portfolio/grid/item6.jpg" alt="Portfolio Name">
+                                    <img src=" {{ asset('/assets/images/portfolio/grid/item6.jpg') }} " alt="Portfolio Name">
                                     <figcaption>
-                                        <a href="assets/images/portfolio/grid/item6.jpg" data-thumb="assets/images/portfolio/grid/item6.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href=" {{ asset('/assets/images/portfolio/grid/item6.jpg') }} " data-thumb=" {{ asset('/assets/images/portfolio/grid/item6.jpg') }} " class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
@@ -1180,9 +1180,9 @@
 
                             <div class="portfolio-item video marketing">
                                 <figure>
-                                    <img src="assets/images/portfolio/grid/item7.jpg" alt="Portfolio Name">
+                                    <img src="{{asset('/assets/images/portfolio/grid/item7.jpg')}}" alt="Portfolio Name">
                                     <figcaption>
-                                        <a href="assets/images/portfolio/grid/item7.jpg" data-thumb="assets/images/portfolio/grid/item7.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href="{{asset('/assets/images/portfolio/grid/item7.jpg')}}" data-thumb="{{asset('/assets/images/portfolio/grid/item7.jpg')}}" class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
@@ -1196,9 +1196,9 @@
 
                             <div class="portfolio-item wordpress">
                                 <figure>
-                                    <img src="assets/images/portfolio/grid/item8.jpg" alt="Portfolio Name">
+                                    <img src="{{asset('/assets/images/portfolio/grid/item8.jpg')}}" alt="Portfolio Name">
                                     <figcaption>
-                                        <a href="assets/images/portfolio/grid/item8.jpg" data-thumb="assets/images/portfolio/grid/item8.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href="{{asset('/assets/images/portfolio/grid/item8.jpg')}}" data-thumb="{{asset('/assets/images/portfolio/grid/item8.jpg')}}" class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
@@ -1233,7 +1233,7 @@
                                                 <div class="testimonial-owner">
                                                     <h5>Jason Richardson<span>Ceo of Boss Inc.</span></h5>
                                                     <figure>
-                                                        <img src="assets/images/testimonials/user1.jpg" alt="Name">
+                                                        <img src="{{asset('/assets/images/testimonials/user1.jpg')}}" alt="Name">
                                                     </figure>
                                                 </div><!-- End .testimonial-owner -->
                                             </div><!-- End .testimonial-box -->
@@ -1249,7 +1249,7 @@
                                                 <div class="testimonial-owner">
                                                     <h5>Eon Dean<span>Ceo of Eonythemes</span></h5>
                                                     <figure>
-                                                        <img src="assets/images/testimonials/user2.jpg" alt="Name">
+                                                        <img src="{{asset('/assets/images/testimonials/user2.jpg')}}" alt="Name">
                                                     </figure>
                                                 </div><!-- End .testimonial-owner -->
                                             </div><!-- End .testimonial-box -->
@@ -1265,7 +1265,7 @@
                                                 <div class="testimonial-owner">
                                                     <h5>Dean James<span>Ceo of e2themes</span></h5>
                                                     <figure>
-                                                        <img src="assets/images/testimonials/user3.jpg" alt="Name">
+                                                        <img src="{{asset('/assets/images/testimonials/user3.jpg')}}" alt="Name">
                                                     </figure>
                                                 </div><!-- End .testimonial-owner -->
                                             </div><!-- End .testimonial-box -->
@@ -1281,7 +1281,7 @@
                                                 <div class="testimonial-owner">
                                                     <h5>Desmond Likes<span>Ceo of Coldplay</span></h5>
                                                     <figure>
-                                                        <img src="assets/images/testimonials/user4.jpg" alt="Name">
+                                                        <img src="{{asset('/assets/images/testimonials/user4.jpg')}}" alt="Name">
                                                     </figure>
                                                 </div><!-- End .testimonial-owner -->
                                             </div><!-- End .testimonial-box -->
@@ -1301,61 +1301,61 @@
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <a href="#" class="client" title="Client Title">
-                                                <img src="assets/images/clients/logo1.png" alt="Company Logo">
+                                                <img src="{{asset('/assets/images/clients/logo1.png')}}" alt="Company Logo">
                                             </a>
                                         </div><!-- End .swiper-slide -->
 
                                         <div class="swiper-slide">
                                             <a href="#" class="client" title="Client Title">
-                                                <img src="assets/images/clients/logo2.png" alt="Company Logo">
+                                                <img src="{{asset('/assets/images/clients/logo2.png')}}" alt="Company Logo">
                                             </a>
                                         </div><!-- End .swiper-slide -->
 
                                         <div class="swiper-slide">
                                             <a href="#" class="client" title="Client Title">
-                                                <img src="assets/images/clients/logo3.png" alt="Company Logo">
+                                                <img src="{{asset('/assets/images/clients/logo3.png')}}" alt="Company Logo">
                                             </a>
                                         </div><!-- End .swiper-slide -->
 
                                         <div class="swiper-slide">
                                             <a href="#" class="client" title="Client Title">
-                                                <img src="assets/images/clients/logo4.png" alt="Company Logo">
+                                                <img src="{{asset('/assets/images/clients/logo4.png')}}" alt="Company Logo">
                                             </a>
                                         </div><!-- End .swiper-slide -->
 
                                         <div class="swiper-slide">
                                             <a href="#" class="client" title="Client Title">
-                                                <img src="assets/images/clients/logo5.png" alt="Company Logo">
+                                                <img src="{{asset('/assets/images/clients/logo5.png')}}" alt="Company Logo">
                                             </a>
                                         </div><!-- End .swiper-slide -->
 
                                         <div class="swiper-slide">
                                             <a href="#" class="client" title="Client Title">
-                                                <img src="assets/images/clients/logo6.png" alt="Company Logo">
+                                                <img src="{{asset('/assets/images/clients/logo6.png')}}" alt="Company Logo">
                                             </a>
                                         </div><!-- End .swiper-slide -->
 
                                         <div class="swiper-slide">
                                             <a href="#" class="client" title="Client Title">
-                                                <img src="assets/images/clients/logo7.png" alt="Company Logo">
+                                                <img src="{{asset('/assets/images/clients/logo7.png')}}" alt="Company Logo">
                                             </a>
                                         </div><!-- End .swiper-slide -->
 
                                         <div class="swiper-slide">
                                             <a href="#" class="client" title="Client Title">
-                                                <img src="assets/images/clients/logo8.png" alt="Company Logo">
+                                                <img src="{{asset('/assets/images/clients/logo8.png')}}" alt="Company Logo">
                                             </a>
                                         </div><!-- End .swiper-slide -->
 
                                         <div class="swiper-slide">
                                             <a href="#" class="client" title="Client Title">
-                                                <img src="assets/images/clients/logo9.png" alt="Company Logo">
+                                                <img src="{{asset('/assets/images/clients/logo9.png')}}" alt="Company Logo">
                                             </a>
                                         </div><!-- End .swiper-slide -->
 
                                         <div class="swiper-slide">
                                             <a href="#" class="client" title="Client Title">
-                                                <img src="assets/images/clients/logo1.png" alt="Company Logo">
+                                                <img src="{{asset('/assets/images/clients/logo1.png')}}" alt="Company Logo">
                                             </a>
                                         </div><!-- End .swiper-slide -->
                                     </div><!-- End .swiper-wrapper -->
@@ -1378,7 +1378,7 @@
                                 <article class="entry entry-grid">
                                     <div class="entry-media">
                                         <figure>
-                                            <a href="single.html"><img src="assets/images/blog/post1.jpg" alt="Post image"></a>
+                                            <a href="single.html"><img src="{{asset('/assets/images/blog/post1.jpg')}}" alt="Post image"></a>
                                         </figure>
                                     </div><!-- End .entry-media -->
 
@@ -1409,11 +1409,11 @@
                                         <figure id="blog-post-gallery" class="carousel slide" data-ride="carousel" data-interval="10000">
                                             <div class="carousel-inner">
                                                 <div class="item active">
-                                                    <a href="single.html"><img src="assets/images/blog/post2.jpg" alt="Post image"></a>
+                                                    <a href="single.html"><img src="{{asset('/assets/images/blog/post2.jpg')}}" alt="Post image"></a>
                                                 </div><!-- End .item -->
 
                                                 <div class="item">
-                                                    <a href="single.html"><img src="assets/images/blog/post3.jpg" alt="Post image"></a>
+                                                    <a href="single.html"><img src="{{asset('/assets/images/blog/post3.jpg')}}" alt="Post image"></a>
                                                 </div><!-- End .item -->
                                             </div><!-- End .carousel-inner -->
 
@@ -1448,7 +1448,7 @@
                                 <article class="entry entry-grid">
                                     <div class="entry-media">
                                         <figure>
-                                            <a href="single.html"><img src="assets/images/blog/post4.jpg" alt="Post image"></a>
+                                            <a href="single.html"><img src="{{asset('/assets/images/blog/post4.jpg')}}" alt="Post image"></a>
                                         </figure>
                                     </div><!-- End .entry-media -->
 
@@ -1477,7 +1477,7 @@
                                 <article class="entry entry-grid">
                                     <div class="entry-media">
                                         <figure>
-                                            <a href="single.html"><img src="assets/images/blog/post5.jpg" alt="Post image"></a>
+                                            <a href="single.html"><img src="{{asset('/assets/images/blog/post5.jpg')}}" alt="Post image"></a>
                                         </figure>
                                     </div><!-- End .entry-media -->
 
@@ -1506,7 +1506,7 @@
                                 <article class="entry entry-grid">
                                     <div class="entry-media">
                                         <figure>
-                                            <a href="single.html"><img src="assets/images/blog/post6.jpg" alt="Post image"></a>
+                                            <a href="single.html"><img src="{{asset('/assets/images/blog/post6.jpg')}}" alt="Post image"></a>
                                         </figure>
                                     </div><!-- End .entry-media -->
 
@@ -1535,7 +1535,7 @@
                                 <article class="entry entry-grid">
                                     <div class="entry-media">
                                         <figure>
-                                            <a href="single.html"><img src="assets/images/blog/post7.jpg" alt="Post image"></a>
+                                            <a href="single.html"><img src="{{asset('/images/blog/post7.jpg')}}" alt="Post image"></a>
                                         </figure>
                                     </div><!-- End .entry-media -->
 
@@ -1660,7 +1660,7 @@
                             <div class="row">
                                 <div class="col-md-12 col-sm-6">
                                     <div class="widget about-widget">
-                                        <img src="assets/images/footer-logo.png" alt="Bold Logo" class="footer-logo">
+                                        <img src="{{asset('/assets/images/footer-logo.png')}}" alt="Bold Logo" class="footer-logo">
                                         <p>We create themes and templates with bootstrap. We work with passion to provide you better services.</p>
                                         <ul class="about-list">
                                             <li><span>Visit Us:</span> 221B Baker St, Marylebone, London UK</li>
@@ -1721,25 +1721,25 @@
         <a id="scroll-top" href="#top" title="Scroll top"><i class="fa fa-angle-up"></i></a>
 
         <!-- End -->
-        <script src="assets/js/plugins.min.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="{{asset('/assets/js/plugins.min.js')}}"></script>
+        <script src="{{asset('/assets/js/main.js')}}"></script>
 
         <!-- REVOLUTION JS FILES -->
-        <script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="{{asset('/assets/js/jquery.themepunch.tools.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('/assets/js/jquery.themepunch.revolution.min.js')}}"></script>
 
         <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
         (Load Extensions only on Local File Systems !  
         The following part can be removed on Server for On Demand Loading) -->  
-        <script type="text/javascript" src="assets/js/extensions/revolution.extension.actions.min.js"></script>
-        <script type="text/javascript" src="assets/js/extensions/revolution.extension.carousel.min.js"></script>
-        <script type="text/javascript" src="assets/js/extensions/revolution.extension.kenburn.min.js"></script>
-        <script type="text/javascript" src="assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script type="text/javascript" src="assets/js/extensions/revolution.extension.migration.min.js"></script>
-        <script type="text/javascript" src="assets/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script type="text/javascript" src="assets/js/extensions/revolution.extension.parallax.min.js"></script>
-        <script type="text/javascript" src="assets/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script type="text/javascript" src="assets/js/extensions/revolution.extension.video.min.js"></script>
+        <script type="text/javascript" src="{{asset('/assets/js/extensions/revolution.extension.actions.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('/assets/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('/assets/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('/assets/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('/assets/js/extensions/revolution.extension.migration.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('/assets/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('/assets/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('/assets/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('/assets/js/extensions/revolution.extension.video.min.js')}}"></script>
 
         <script type="text/javascript">
             (function() {
