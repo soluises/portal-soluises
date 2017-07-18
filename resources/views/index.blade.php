@@ -662,10 +662,10 @@
                     <div id="rev_slider" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
                         <ul>
                             <!-- SLIDE  -->
-                            <li data-index="rs-1" data-transition="slideoverup" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1200"  data-thumb="assets/images/homepages/index/slide1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Bold">
+                            <li data-index="rs-1" data-transition="slideoverup" data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1200"  data-thumb="{{asset('/assets/images/homepages/index/slide1-100x50.jpg')}}" data-rotate="0" data-saveperformance="off" data-title="Bold">
 
                                 <!-- MAIN IMAGE -->
-                                <img src=" {{ asset('/assets/images/homepages/index/slide1.jpg') }} " alt="Slider bg 1"  data-bgposition="center center" data-duration="11000" data-ease="Linear.easeNone" class="rev-slidebg" data-no-retina>
+                                <img src="{{asset('/assets/images/homepages/index/slide1.jpg')}}" alt="Slider bg 1" data-bgposition="center center" data-duration="11000" data-ease="Linear.easeNone" class="rev-slidebg" data-no-retina>
                                 <!-- LAYERS -->
 
                                 <!-- LAYER NR. 1 - overlay -->
@@ -778,10 +778,10 @@
                                 </a>
                             </li>
                             <!-- SLIDE  -->
-                            <li data-index="rs-2" data-transition="slideoverdown" data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1200" data-thumb=" {{ asset('/images/homepages/index/slide2-100x50.jpg') }}" data-rotate="0" data-saveperformance="off" data-title="Purchase">
+                            <li data-index="rs-2" data-transition="slideoverdown" data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1200" data-thumb="{{asset('/assets/images/homepages/index/slide2-100x50.jpg')}}" data-rotate="0" data-saveperformance="off" data-title="Purchase">
 
                                 <!-- MAIN IMAGE -->
-                                <img src=" {{ asset('/assets/images/homepages/index/slide2.jpg') }} " alt="Slider bg 2"  data-bgposition="center center" data-duration="11000" data-ease="Linear.easeNone" class="rev-slidebg" data-no-retina>
+                                <img src="{{asset('/assets/images/homepages/index/slide2.jpg')}}" alt="Slider bg 2"  data-bgposition="center center" data-duration="11000" data-ease="Linear.easeNone" class="rev-slidebg" data-no-retina>
                                 <!-- LAYERS -->
 
                                 <!-- LAYER NR. 1 - overlay -->
@@ -1084,9 +1084,9 @@
                         <div id="portfolio-item-container" class="popup-gallery max-col-4" data-layoutmode="fitRows">
                             <div class="portfolio-item web-design wordpress">
                                 <figure>
-                                    <img src=" {{ asset('/assets/images/portfolio/grid/item1.jpg') }} " alt="Portfolio Name">
+                                    <img src="{{asset('/assets/images/portfolio/grid/item1.jpg')}}" alt="Portfolio Name">
                                     <figcaption>
-                                        <a href=" {{ asset('/assets/images/portfolio/grid/item1.jpg') }} " data-thumb=" {{ asset('/assets/images/portfolio/grid/item1.jpg') }} " class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href="{{asset('/assets/images/portfolio/grid/item1.jpg')}}" data-thumb="{{asset('/assets/images/portfolio/grid/item1.jpg')}}" class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
@@ -1100,7 +1100,7 @@
 
                             <div class="portfolio-item web-design marketing">
                                 <figure>
-                                    <img src=" {{ asset('/assets/images/portfolio/grid/item2.jpg') }} " alt="Portfolio Name">
+                                    <img src="{{asset('/assets/images/portfolio/grid/item2.jpg')}}" alt="Portfolio Name">
                                      <figcaption>
                                         <a href="http://www.youtube.com/watch?v=jt8YicG-F6c" data-thumb="assets/images/portfolio/grid/item2.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
@@ -1116,9 +1116,9 @@
 
                             <div class="portfolio-item wordpress">
                                 <figure>
-                                    <img src=" {{ asset('/assets/images/portfolio/grid/item3.jpg') }} " alt="Portfolio Name">
+                                    <img src="{{asset('/assets/images/portfolio/grid/item3.jpg')}}" alt="Portfolio Name">
                                     <figcaption>
-                                        <a href=" {{ asset('/assets/images/portfolio/grid/item3.jpg') }} " data-thumb=" {{ asset('/assets/images/portfolio/grid/item3.jpg') }} " class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href="{{asset('/assets/images/portfolio/grid/item3.jpg')}}" data-thumb="{{asset('/assets/images/portfolio/grid/item3.jpg')}}" class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
@@ -1132,9 +1132,9 @@
 
                             <div class="portfolio-item web-design wordpress">
                                 <figure>
-                                    <img src=" {{ asset('/assets/images/portfolio/grid/item4.jpg') }} " alt="Portfolio Name">
+                                    <img src="{{asset('/assets/images/portfolio/grid/item4.jpg')}}" alt="Portfolio Name">
                                     <figcaption>
-                                        <a href=" {{ asset('/assets/images/portfolio/grid/item4.jpg') }} " data-thumb=" {{ asset('/assets/images/portfolio/grid/item4.jpg') }} " class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href="{{asset('/assets/images/portfolio/grid/item4.jpg')}}" data-thumb="{{asset('/assets/images/portfolio/grid/item4.jpg')}}" class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
@@ -1148,9 +1148,9 @@
 
                             <div class="portfolio-item logo-design video marketing">
                                 <figure>
-                                    <img src=" {{ asset('/assets/images/portfolio/grid/item5.jpg') }} " alt="Portfolio Name">
+                                    <img src="{{asset('/assets/images/portfolio/grid/item5.jpg')}}" alt="Portfolio Name">
                                     <figcaption>
-                                        <a href=" {{ asset('/assets/images/portfolio/grid/item5.jpg') }} " data-thumb=" {{ asset('/assets/images/portfolio/grid/item5.jpg') }} " class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href="{{asset('/assets/images/portfolio/grid/item5.jpg')}}" data-thumb="{{asset('/assets/images/portfolio/grid/item5.jpg')}}" class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
@@ -1164,9 +1164,9 @@
 
                             <div class="portfolio-item logo-design wordpress">
                                 <figure>
-                                    <img src=" {{ asset('/assets/images/portfolio/grid/item6.jpg') }} " alt="Portfolio Name">
+                                    <img src="{{asset('/assets/images/portfolio/grid/item6.jpg')}}" alt="Portfolio Name">
                                     <figcaption>
-                                        <a href=" {{ asset('/assets/images/portfolio/grid/item6.jpg') }} " data-thumb=" {{ asset('/assets/images/portfolio/grid/item6.jpg') }} " class="zoom-btn"><i class="fa fa-search"></i></a>
+                                        <a href="{{asset('/assets/images/portfolio/grid/item6.jpg')}}" data-thumb="{{asset('/assets/images/portfolio/grid/item6.jpg')}}" class="zoom-btn"><i class="fa fa-search"></i></a>
                                     </figcaption>
                                 </figure>
                                 <div class="portfolio-meta">
