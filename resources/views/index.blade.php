@@ -51,17 +51,6 @@
                             </ul>
                         </div><!-- End .header-dropdown -->
 
-                        {{--<div class="dropdown header-dropdown pull-right">--}}
-                            {{--<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Currency</a>--}}
-
-                            {{--<ul class="dropdown-menu">--}}
-                                {{--<li><a href="#">Dollar</a></li>--}}
-                                {{--<li><a href="#">Euro</a></li>--}}
-                                {{--<li><a href="#">Pound</a></li>--}}
-                                {{--<li><a href="#">Yen</a></li>--}}
-                            {{--</ul>--}}
-                        {{--</div><!-- End .header-dropdown -->--}}
-
                         <ul class="top-menu visible-lg pull-left">
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="#">Sobre</a></li>
@@ -176,7 +165,7 @@
             <div class="header-search-form">
                 <a href="#" class="header-search-toggle" title="Close"><i class="fa fa-times"></i></a>
                 <form action="#">
-                    <input type="search" class="form-control" placeholder="Type in here" required>
+                    <input type="search" class="form-control" placeholder="Pesquise aqui" required>
                 </form>
             </div><!-- End .header-search-form -->
             {{-- END HEADER / MENU --}}
