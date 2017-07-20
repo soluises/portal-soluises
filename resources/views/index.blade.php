@@ -1535,7 +1535,7 @@
                                 <article class="entry entry-grid">
                                     <div class="entry-media">
                                         <figure>
-                                            <a href="single.html"><img src="{{asset('/images/blog/post7.jpg')}}" alt="Post image"></a>
+                                            <a href="single.html"><img src="{{asset('/assets/images/blog/post7.jpg')}}" alt="Post image"></a>
                                         </figure>
                                     </div><!-- End .entry-media -->
 
