@@ -11,4 +11,18 @@ var mix = require('laravel-mix');
  |
  */
 
-mix.copyDirectory('resources/assets', 'public/assets');
+// Fonts
+mix.copyDirectory('resources/assets/fonts', 'public/assets/fonts');
+
+// SASS
+mix.sass('resources/assets/sass/style.scss', 'public/assets/css/app.css')
+    .sass('resources/assets/sass/custom.scss', 'public/assets/css/app.css');
+
+// CSS
+mix.copyDirectory('resources/assets/css', 'public/assets/css');
+
+// JS
+mix.copyDirectory('resources/assets/js', 'public/assets/js');
+
+// Imagens
+mix.copyDirectory('resources/assets/images', 'public/assets/images');
