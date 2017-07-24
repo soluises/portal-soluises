@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{url('/assets/css/layers.css')}}">
     <link rel="stylesheet" href="{{url('/assets/css/navigation.css')}}">
     <link rel="stylesheet" href="{{url('/assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{url('/assets/css/app.css')}}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{url('/assets/images/icons/favicon.png')}}">
