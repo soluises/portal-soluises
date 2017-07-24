@@ -1,5 +1,5 @@
-Rotas iniciais para Portal Soluises
------------------------------------
+Endpoints iniciais para Portal Soluises
+---------------------------------------
 
 ### Access Routes
 
