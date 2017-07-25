@@ -42,7 +42,7 @@
         <div class="header-top">
             <div class="container-fluid">
                 <div class="dropdown header-dropdown pull-right">
-                    <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Linguagens</a>
+                    <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Idiomas</a>
 
                     <ul class="dropdown-menu">
                         <li><a href="#">English</a></li>
@@ -57,12 +57,12 @@
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Explore</a></li>
-                    <li><a href="#">Apoiadores</a></li>
-                    <li><a href="#">Investidores</a></li>
-                    <li><a href="#">Mantenedores</a></li>
-                    <li><a href="#">FAQ YOU!</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">Mais</a></li>
+                    <!-- <li><a href="#">Apoiadores</a></li> -->
+                    <!-- <li><a href="#">Investidores</a></li> -->
+                    <!-- <li><a href="#">Mantenedores</a></li> -->
+                    <!-- <li><a href="#">FAQ YOU!</a></li> -->
+                    <!-- <li><a href="#">Disclaimer</a></li> -->
+                    <!-- <li><a href="#">Mais</a></li> -->
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
